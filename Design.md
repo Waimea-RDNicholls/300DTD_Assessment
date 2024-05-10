@@ -122,6 +122,14 @@ With an app that needs a strong filtering system, there is inevitably going to b
 <!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle. -->
 This means considering how to integrate that recognition over recall idea. In practice, it's not very efficient to grant the user a massive drop-down list of every single boardgame, videogame, etc they can filter by. This means instead of relying on those massive lists, letting the app somehow remember what the user previously inputted, who they previously chatted to, etc. It means thinking about how and when to use those lists and pre-curated options and when to force the user to have to have that tiny bit of recall. Ideally, it also means making sure that even if you don't recall things very well, the app will remain easy to use.
 
+### Visibility of System Status
+
+This means making sure the user knows what's going on inside the system. When they click a button, they should get feedback that the system is now responding to that button press.
+
+This is relevant to my app (but really any app) because a lack of information confuses users and can lead to mistakes. If there's no visible response when the user creates an account, they might keep making accounts until they catch on. If the users try to send a message but don't get told the message was sent, they have no way to tell if they've actually managed to communicate with the other person. This can be particularily relevant for my project as there will be many casual users who do not have the patience or time to try work through some esoteric app.
+
+This means considering when and where to tell the user that a task or request is being processed. Maybe the users shouldn't be told that they've successfully toggled a filter; rather, that should just work and they'll see the result of it working. But, if the user wants to update their profile or change their available times, maybe they should be told that it's updated successfully. Thinking when it's viable to not tell the user that something has happened and where it is necessary to avoid making the app cumbersome to use is key.
+
 ### Help Users Recognize, Diagnose, and Recover from Errors
 
 <!-- Replace this text with a clear explanation of what the UX design principle means. -->
@@ -132,6 +140,8 @@ This is relevant because presumably most people using the app will not be techno
 
 <!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle. -->
 This means I will have to consider what errors will need those obvious "do x, y and z to fix" messages but also what problems will require the users to simply report it to a developer. I'll need to make sure all of those error messages that occur from simple problems are easy to understand and follow, perhaps by testing it on my less techy friends. This means for those complex problems, making sure the user knows how to contact a developer/the administration to get that help they might need.
+
+###
 
 
 -------------------------------------------------
