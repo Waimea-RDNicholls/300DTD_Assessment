@@ -141,7 +141,13 @@ This is relevant because presumably most people using the app will not be techno
 <!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle. -->
 This means I will have to consider what errors will need those obvious "do x, y and z to fix" messages but also what problems will require the users to simply report it to a developer. I'll need to make sure all of those error messages that occur from simple problems are easy to understand and follow, perhaps by testing it on my less techy friends. This means for those complex problems, making sure the user knows how to contact a developer/the administration to get that help they might need.
 
-###
+### Help and Documentation
+
+This means making a system that needs minimal documentation for users. However, all documentation that does exist should be short to read, that doesn't use jargon, and users shouldn't have a hard time accessing it. In essence, making sure the user can always easily access help and then easily digest the information contained within the documentation for that help.
+
+This is relevant because people will inevitably be confused with such a large end user base. Some people may not understand how or update or edit their preferences for games, or how to go about searching for a user, or how to change their available times. We take these as givens, but many people who enjoy boardgames may barely touch apps like this and so would like the extra help. It's helpful that many people who enjoy games or boardgames tend to be okay with a bit of reading, so they might also like that documentation simply to wrap their head around how everything works.
+
+This means asking the end users what they think is confusing and what they don't understand intuitively. Choosing when it's better to redesign something to become more intuitive or when to add documentation on how to use that feature is smart; if a key feature needs documentation when it should be simple, something has gone wrong. Also, when asking end-user feedback for this, specifically ask people who are the least likely to understand how to intuitively use the app, since they'll be the main ones who will need to use that documentation.
 
 
 -------------------------------------------------
