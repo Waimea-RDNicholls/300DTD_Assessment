@@ -30,15 +30,21 @@ Previously, the database looked like this. A few parts were unnecessary (the det
 
 Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc. -->
 
-### DATE HERE
+### 17/05/2024
 
-Replace this test with what you are working on
+High-Level Design/Flow of App
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+Made 2 drafts of potential app flow and high-level design.
+![Alt text](images/highLevelFlow.png)
 
-> Replace this text with any user feedback / comments
+Design 1 would have a home page, which perhaps would display your profile, your friends, etc. From there, you can access every other menu from which to use the app.
+Design 2 would default to the search menu as a home page, meaning you can immediately start searching for other users. It would act as the hub from which to access all other pages.
+Design 1 feels more consistent and adaptable, if I need to add something I can add another button to the homepage. However, the main function of the app is to search. I'm unsure if users would want the extra step of going to the filtering page to start using the app.
+Curious about whether users would like a button that immediately sends them to the home screen, that can be accessed from any view of the app.
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+To be discussed with the endusers. Also will be taking the opportunity to discuss the database draft with them.
+
+
 
 ### DATE HERE
 
