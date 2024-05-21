@@ -42,19 +42,44 @@ Design 2 would default to the search menu as a home page, meaning you can immedi
 Design 1 feels more consistent and adaptable, if I need to add something I can add another button to the homepage. However, the main function of the app is to search. I'm unsure if users would want the extra step of going to the filtering page to start using the app.
 Curious about whether users would like a button that immediately sends them to the home screen, that can be accessed from any view of the app.
 
-To be discussed with the endusers. Also will be taking the opportunity to discuss the database draft with them.
+To be discussed with the end users. Also will be taking the opportunity to discuss the database draft with them.
 
 
 
-### DATE HERE
+### 21/05/2024
 
-Replace this test with what you are working on
+Colour Scheme planning
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+Planned out a few different potential colour schemes, to discuss with end users. Each colour scheme is based on a different design idea.
 
-> Replace this text with any user feedback / comments
+![Alt text](images/beigecolour.png)
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+
+The beige colour scheme tries to draw on more of a boardgame cafe feel. Warm and inviting type of colour scheme.
+
+![Alt text](images/graybeigecolour.png)
+
+Alternatively, integrate grays and blacks to allow for greater contrast and usability.
+
+![Alt text](images/bluecolour.png)
+
+The blues tries to be more video-gamey, sharp and modern. More futuristic, less comfy. Would probably be used in conjunction with a hyper-minimalist type of design.
+
+![Alt text](images/orangebluecolour.png)
+
+Get better contrast with more orange and gray, alternatively.
+
+![Alt text](images/purplecolour.png)
+
+The purple aims to combine the sharp colours of the blue with a more warm feeling from the lighter lavenders. Also because I just really like the colour purple.
+
+This will be the third thing to discuss with my end users. See what colour schemes they like/what kind of feel they support the app going for, as well as any suggestions they may have before actually doing any drafting of what the app looks like.
+
+Note to self: refer to https://www.flux-academy.com/blog/how-to-strategically-use-color-in-website-design
+
+<!-- > Replace this text with any user feedback / comments
+
+Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc. -->
 
 ### DATE HERE
 
