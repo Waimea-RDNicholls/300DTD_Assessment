@@ -77,6 +77,9 @@ This will be the third thing to discuss with my end users. See what colour schem
 
 Note to self: refer to https://www.flux-academy.com/blog/how-to-strategically-use-color-in-website-design
 
+Second note to self: refer to https://lawsofux.com/
+
+
 <!-- > Replace this text with any user feedback / comments
 
 Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc. -->
