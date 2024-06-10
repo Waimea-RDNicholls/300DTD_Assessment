@@ -92,18 +92,23 @@ Got end user feedback on my current schematics.
 
 The first higher level flow design will be used. I'll focus on simpler colours for ease of use.
 
-![Alt text](image.png)
+![Alt text](images/design1.png)
 Also made a rough figma draft of the actual website, to be discussed with the end users.
 
 ### DATE HERE
 
-Replace this test with what you are working on
+Got more end user feedback on higher level flow as well as some design choices from ReptileMan1234 (formerly totallywaffles)
+![Alt text](images/userfeedback_2.png)
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
 
-> Replace this text with any user feedback / comments
+I'm going to look into replacing the profile with the suggestion my end user wanted. This changed the starting screen into looking like this:
+![Alt text](images/design2.png)
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+The higher level flow remains relatively similar, but you can immediately search/prepare to message people. This cuts out the stage of "go to filter screen" or "go to messages screen" from the higher level flow. You have to click on the header with your username to get to your profile now, but overall, the amounts of clicks has been reduced.
+
+
+
+
 
 ### DATE HERE
 
