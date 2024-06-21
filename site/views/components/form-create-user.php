@@ -10,15 +10,15 @@
     <input name="pass" type="text" required>
 
     <label>Type</label>
-    <input name="user" type="text" required>
+    <input name="type" type="int" required>
 
     <label>Continent</label>
-    <input name="user" type="text" required>
+    <input name="continent" type="int" required>
 
     <label>Preferences</label>
-    <input name="user" type="text" required>
+    <input name="preference" type="text" required>
 
     <label>Description</label>
-    <input name="user" type="text" required>
+    <input name="desc" type="text" required>
 
     <input type="submit" value="Sign Up!">

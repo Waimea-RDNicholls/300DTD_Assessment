@@ -17,6 +17,17 @@ const SITE_OWNER = 'Riley Nicholls';
 $router = new Router(['debug' => true]);
 
 
+// Create a session
+session_name('Website');
+session_start();
+
+// Check which type of user we are
+$userName   = $_SESSION['user']['name']     ?? 'Guest';
+$isLoggedIn = $_SESSION['user']['loggedIn'] ?? false;
+
+
+
+
 //-------------------------------------------------------------
 // Define routes
 

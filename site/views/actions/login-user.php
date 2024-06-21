@@ -21,6 +21,7 @@ if ($userData) {
     // Have an account, so check password
     if (password_verify($pass, $userData['hash'])) {
         // We got here, so user and password both fine
+        $_SESSION['user']['name'] = $user;
         $_SESSION['user']['loggedIn'] = true;
         // Save user data for future use
         // $_SESSION['user']['forename'] = $userData['forename'];
@@ -28,7 +29,7 @@ if ($userData) {
         // $_SESSION['user']['admin'] = $userData['admin'];
         // $_SESSION['user']['manager'] = $userData['manager'];
         // Go to home page
-        // header('HX-Redirect: ' . SITE_BASE . '/home');
+        header('HX-Redirect: ' . SITE_BASE . '/about');
     }
     else {
         echo '<h2>Incorrect password.</h2>';
