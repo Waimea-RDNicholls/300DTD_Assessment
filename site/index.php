@@ -32,16 +32,24 @@ $isLoggedIn = $_SESSION['user']['loggedIn'] ?? false;
 // Define routes
 
 $router->route(GET, PAGE, '/',      'pages/home.php');
+$router->route(GET, PAGE, '/profile',      'pages/profile.php');
+$router->route(GET, PAGE, '/filter',      'pages/filter.php');
 
 // Homepage when not logged in, register/login routes
 $router->route(GET, HTMX, '/register',    'components/form-create-user.php');
 $router->route(GET, HTMX, '/login',    'components/form-login-user.php');
+$router->route(GET, HTMX, '/scheduleform',    'components/form-create-schedule.php');
+$router->route(GET, HTMX, '/viewschedule',    'components/view-schedule.php');
+$router->route(GET, HTMX, '/filterlist', 'components/filter-list.php');
 
 $router->route(POST,   HTMX, '/do_register',          'actions/create-user.php');
 $router->route(POST,   HTMX, '/do_login',          'actions/login-user.php');
 
+$router->route(POST,   HTMX, '/create_schedule',          'actions/create-schedule.php');
+
 
 $router->route(GET, PAGE, '/about', 'pages/about.php');
+$router->route(GET, PAGE, '/logout', 'actions/logout-user.php');
 
 
 

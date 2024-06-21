@@ -1,10 +1,11 @@
 <?php global $isLoggedIn; ?>
 
 
-<?php if ($isLoggedIn): ?>
-    <h1>Welcome, [user]</h1>
+<?php if ($isLoggedIn): 
+    echo '<h1>Welcome,  '.$_SESSION['user']['name'].'</h1>';
 
-    <?php else: ?>
+    
+else: ?>
 
     <h1>Welcome to GameLinker!</h1>
 <p>It seems you aren't signed in.</p>

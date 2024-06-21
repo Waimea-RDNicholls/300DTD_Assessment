@@ -1,4 +1,7 @@
 <!-- Main navigation menu. Can add logic for user type / access -->
+<?php global $isLoggedIn; ?>
+
+
 
 <nav id="main-nav">
 
@@ -6,6 +9,13 @@
 
         <li><a href="/">Home</a>
         <li><a href="/about">About</a>
+        <?php if ($isLoggedIn) {
+        echo '<li><a href="/logout">Logout</a>';
+        echo '<li><a href="/profile">'.$_SESSION['user']['name'].'</a>';
+        echo '<li><a href="/filter">Search</a>';
+        }?>
+
+
 
     </menu>
 

@@ -24,10 +24,11 @@ if ($userData) {
         $_SESSION['user']['name'] = $user;
         $_SESSION['user']['loggedIn'] = true;
         // Save user data for future use
-        // $_SESSION['user']['forename'] = $userData['forename'];
-        // $_SESSION['user']['surname'] = $userData['surname'];
-        // $_SESSION['user']['admin'] = $userData['admin'];
-        // $_SESSION['user']['manager'] = $userData['manager'];
+        $_SESSION['user']['id'] = $userData['id'];
+        $_SESSION['user']['continent'] = $userData['continent'];
+        $_SESSION['user']['preferences'] = $userData['preferences'];
+        $_SESSION['user']['type'] = $userData['type'];
+
         // Go to home page
         header('HX-Redirect: ' . SITE_BASE . '/about');
     }
