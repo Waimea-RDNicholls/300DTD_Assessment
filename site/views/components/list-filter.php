@@ -23,9 +23,14 @@ catch (PDOException $e) {
     die('There was an error when connecting to the database');
 }
 
+echo '<ul id="filter-list">';
+
 foreach($users as $user) {
     if ($user['id'] != $_SESSION['user']['id']) {
-    echo '<li>'.$user['username'].'</li>';
+    echo '<li
+    hx-trigger="click"
+    hx-get="/user/'.$user['id'].'"
+    hx-target="#filter-list">'.$user['username'].'</li>';
     }
 }
 echo '</ul>';

@@ -3,11 +3,11 @@ require_once 'lib/db.php';
 $db = connectToDB();
 
 
-$query = 'SELECT * FROM times';
+$query = 'SELECT * FROM times WHERE userid = ?';
 
 try {
     $stmt = $db->prepare($query);
-    $stmt->execute();
+    $stmt->execute([$userid]);
     $times = $stmt->fetchAll();
 }
 catch (PDOException $e) {

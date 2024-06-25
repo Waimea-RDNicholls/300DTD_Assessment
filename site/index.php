@@ -34,16 +34,24 @@ $isLoggedIn = $_SESSION['user']['loggedIn'] ?? false;
 $router->route(GET, PAGE, '/',      'pages/home.php');
 $router->route(GET, PAGE, '/profile',      'pages/profile.php');
 $router->route(GET, PAGE, '/filter',      'pages/filter.php');
+$router->route(GET, PAGE, '/messages',      'pages/messages.php');
 
 // Homepage when not logged in, register/login routes
 $router->route(GET, HTMX, '/register',    'components/form-create-user.php');
 $router->route(GET, HTMX, '/login',    'components/form-login-user.php');
 $router->route(GET, HTMX, '/scheduleform',    'components/form-create-schedule.php');
-$router->route(GET, HTMX, '/viewschedule',    'components/view-schedule.php');
-$router->route(GET, HTMX, '/filterlist', 'components/filter-list.php');
+
+$router->route(GET, HTMX, '/filterlist', 'components/list-filter.php');
+$router->route(GET, HTMX, '/messagelist', 'components/list-filter.php');
+
+$router->route(GET, HTMX, '/user/$id', 'components/details-user.php');
+$router->route(GET, HTMX, '/messageform/$id', 'components/form-send-message.php');
+$router->route(GET, HTMX, '/viewschedule/$userid',    'components/view-schedule.php');
+$router->route(GET, HTMX, '/viewmessage/$id',    'components/details-message.php');
 
 $router->route(POST,   HTMX, '/do_register',          'actions/create-user.php');
 $router->route(POST,   HTMX, '/do_login',          'actions/login-user.php');
+$router->route(POST,   HTMX, '/send_message',          'actions/send-message.php');
 
 $router->route(POST,   HTMX, '/create_schedule',          'actions/create-schedule.php');
 
