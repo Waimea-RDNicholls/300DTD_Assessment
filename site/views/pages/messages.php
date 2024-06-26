@@ -1,6 +1,6 @@
 <?php
 
-echo '<h1>'.$_SESSION['user']['name'].'</h1>'
+echo '<h1>Message list for '.$_SESSION['user']['name'].'</h1>'
 ?>
 
 

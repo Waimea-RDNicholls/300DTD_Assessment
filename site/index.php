@@ -42,7 +42,7 @@ $router->route(GET, HTMX, '/login',    'components/form-login-user.php');
 $router->route(GET, HTMX, '/scheduleform',    'components/form-create-schedule.php');
 
 $router->route(GET, HTMX, '/filterlist', 'components/list-filter.php');
-$router->route(GET, HTMX, '/messagelist', 'components/list-filter.php');
+$router->route(GET, HTMX, '/messagelist', 'components/list-messages.php');
 
 $router->route(GET, HTMX, '/user/$id', 'components/details-user.php');
 $router->route(GET, HTMX, '/messageform/$id', 'components/form-send-message.php');
@@ -63,13 +63,13 @@ $router->route(GET, PAGE, '/logout', 'actions/logout-user.php');
 
 // copyable versions for easy access
 // $router->route(GET, PAGE, '/about', 'pages/about.php');
-// $router->route(GET, PAGE, '/osu', 'pages/osu.php');
-// $router->route(GET, HTMX, '/osu',    'components/list-things.php');
-// $router->route(GET, HTMX, '/osu/$id', 'components/details-thing.php');
-// $router->route(GET, HTMX, '/osuform',    'components/form-things.php');
-// $router->route(POST,   HTMX, '/osuform',          'actions/add-thing.php');
-// $router->route(DELETE, HTMX, '/osudelete/$id',      'actions/delete-thing.php');
-// $router->route(PUT,    HTMX, '/osu/$id',      'actions/update-thing.php');
+// $router->route(GET, PAGE, '/thing', 'pages/osu.php');
+// $router->route(GET, HTMX, '/thing',    'components/list-things.php');
+// $router->route(GET, HTMX, '/thing/$id', 'components/details-thing.php');
+// $router->route(GET, HTMX, '/thingform',    'components/form-things.php');
+// $router->route(POST,   HTMX, '/thingform',          'actions/add-thing.php');
+// $router->route(DELETE, HTMX, '/thingdelete/$id',      'actions/delete-thing.php');
+// $router->route(PUT,    HTMX, '/thing/$id',      'actions/update-thing.php');
 
 
 //-------------------------------------------------------------

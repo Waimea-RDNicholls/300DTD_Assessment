@@ -30,7 +30,7 @@ if ($userData) {
         $_SESSION['user']['type'] = $userData['type'];
 
         // Go to home page
-        header('HX-Redirect: ' . SITE_BASE . '/about');
+        header('HX-Redirect: ' . SITE_BASE . '/');
     }
     else {
         echo '<h2>Incorrect password.</h2>';
