@@ -3,7 +3,9 @@ require_once 'lib/db.php';
 $db = connectToDB();
 $target = $_SESSION['user']['id'];
 
-$query = 'SELECT title, id, sender FROM messages WHERE target = ?';
+$query = 'SELECT messages.title, messages.id, users.username FROM messages
+ INNER JOIN users ON messages.sender = users.id
+WHERE target = ?';
 
 try {
     $stmt = $db->prepare($query);
@@ -23,7 +25,7 @@ foreach($messages as $message) {
     hx-get="/viewmessage/'.$message['id'].'"
     hx-target="#view-messages"
     
-    >'.$message['title'].' from '.$message['sender'].'</p>';
+    >'.$message['title'].' from '.$message['username'].'</p>';
 }
 echo '</ul>';
 ?>
