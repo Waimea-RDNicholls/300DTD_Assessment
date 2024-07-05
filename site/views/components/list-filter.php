@@ -14,12 +14,8 @@ catch (PDOException $e) {
     consoleLog($e->getMessage(), 'DB Connect', ERROR);
     die('There was an error when connecting to the database');
 }
-https://stackoverflow.com/questions/59648743/php-rename-key-in-associative-array
-// $ownSchedules[0]["user_start_time"] = $ownSchedules[0]["start_time"];
-// unset($arr[0]["Order_no"]);
 
-$ownSchedule = $ownSchedules[0];
-print_r($ownSchedule);
+
 
 $type = $_SESSION['user']['type'];
 
@@ -46,7 +42,8 @@ catch (PDOException $e) {
 $query = 'SELECT times.start_time, times.end_time, times.userid, users.username FROM times
 INNER JOIN users ON times.userid = users.id
  WHERE userid !=?
-';
+ ORDER BY times.userid DESC';
+
 try {
     $stmt = $db->prepare($query);
     $stmt->execute([$id]);
@@ -57,18 +54,32 @@ catch (PDOException $e) {
     die('There was an error when connecting to the database');
 }
 echo '<ul id="filter-list">';
-foreach($ownSchedules as $ownSchedule) {
+// foreach($ownSchedules as $ownSchedule) {
+//     foreach($otherSchedules as $otherSchedule) {
+
+//         if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
+//             echo '<li
+//             hx-trigger="click"
+//             hx-get="/user/'.$otherSchedule['userid'].'"
+//             hx-target="#filter-list">'.$otherSchedule['username'].'</li>';
+//             echo '<p>Start time: '.$otherSchedule['start_time'].' End time: '.$otherSchedule['end_time'].'</p>'; 
+//         }
+//     }
+
+
     foreach($otherSchedules as $otherSchedule) {
-
-        if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
-            echo '<li
-            hx-trigger="click"
-            hx-get="/user/'.$otherSchedule['userid'].'"
-            hx-target="#filter-list">'.$otherSchedule['username'].'</li>';
-            echo '<p>Start time: '.$otherSchedule['start_time'].' End time: '.$otherSchedule['end_time'].'</p>'; 
+        foreach($ownSchedules as $ownSchedule) {
+    
+            if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
+                echo '<li
+                hx-trigger="click"
+                hx-get="/user/'.$otherSchedule['userid'].'"
+                hx-target="#filter-list">'.$otherSchedule['username'].'</li>';
+                echo '<p>Start time: '.$otherSchedule['start_time'].' End time: '.$otherSchedule['end_time'].'</p>'; 
+            }
         }
-    }
-
+// https://stackoverflow.com/questions/71471414/foreach-loop-inside-loop-is-it-possible-to-sort-the-results
+// Use this principle to see if we can sort the filtered list by user overall, rather than "once for every schedule."
 
 }
 

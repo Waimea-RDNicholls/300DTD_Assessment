@@ -1,5 +1,6 @@
 <form hx-post="/create_schedule"
-      hx-trigger="submit">
+      hx-trigger="submit"
+      hx-swap="innerHTML">
 
 
 
@@ -20,6 +21,5 @@
 
     <label>End Time</label>
     <input name="end" type="int" min="0" max="24" required>
-
 
     <input type="submit" value="Create a Schedule!">

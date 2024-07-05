@@ -4,10 +4,23 @@ require_once 'lib/db.php';
 
 consoleLog($_POST, 'Form Data');
 
-$userid = $_SESSION['user']['id'];
-$day = $_POST['day'];
+
+
 $start = $_POST['start'];
 $end = $_POST['end'];
+if ($start >= $end) {
+    echo '<p>The end time must be greater than the start time.</p>';
+    echo '<button hx-get="/scheduleform"
+    hx-trigger="click"
+    hx-swap="outerHTML">Redo</button>';
+} else {
+
+
+
+$userid = $_SESSION['user']['id'];
+$day = $_POST['day'];
+
+
 
 
 $db = connectToDB();
@@ -19,3 +32,4 @@ $stmt = $db->prepare($query);
 $stmt->execute([$userid, $day, $start, $end]);
 
 echo '<h2>Schedule created!</h2>';
+}

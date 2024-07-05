@@ -15,5 +15,6 @@ echo '<h1>'.$_SESSION['user']['name'].'</h1>'
     <p
     id="scheduling"
         hx-get="/scheduleform"
-        hx-trigger="load">lets do some scheduling!</p>
+        hx-trigger="load"
+        hx-swap="innerHTML">lets do some scheduling!</p>
 </div>
