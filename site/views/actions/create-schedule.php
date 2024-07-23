@@ -9,10 +9,13 @@ consoleLog($_POST, 'Form Data');
 $start = $_POST['start'];
 $end = $_POST['end'];
 if ($start >= $end) {
+    echo '<div id="redo">';
     echo '<p>The end time must be greater than the start time.</p>';
     echo '<button hx-get="/scheduleform"
     hx-trigger="click"
+    hx-target="#redo"
     hx-swap="outerHTML">Redo</button>';
+    echo '</div>';
 } else {
 
 

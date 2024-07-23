@@ -48,6 +48,7 @@ $router->route(GET, HTMX, '/user/$id', 'components/details-user.php');
 $router->route(GET, HTMX, '/messageform/$id', 'components/form-send-message.php');
 $router->route(GET, HTMX, '/viewschedule/$userid',    'components/view-schedule.php');
 $router->route(GET, HTMX, '/viewmessage/$id',    'components/details-message.php');
+$router->route(GET, HTMX, '/userdetails',    'components/details-profile.php');
 
 $router->route(POST,   HTMX, '/do_register',          'actions/create-user.php');
 $router->route(POST,   HTMX, '/do_login',          'actions/login-user.php');
