@@ -28,6 +28,7 @@ if ($userData) {
         $_SESSION['user']['continent'] = $userData['continent'];
         $_SESSION['user']['preferences'] = $userData['preferences'];
         $_SESSION['user']['type'] = $userData['type'];
+        $_SESSION['user']['description'] = $userData['description'];
 
         // Go to home page
         header('HX-Redirect: ' . SITE_BASE . '/');

@@ -14,10 +14,13 @@ catch (PDOException $e) {
     consoleLog($e->getMessage(), 'DB Connect', ERROR);
     die('There was an error when connecting to the database');
 }
-echo '<div>';
+echo '<div id="userinfo">';
 echo '<p>'.$user['preferences'].'</p>';
 echo '<p>'.$user['description'].'</p>';
-echo '<p>'
+echo '<button   hx-trigger="click"
+                hx-get="/formuseredit/'.$id.'"
+                hx-target="#userinfo">
+                Edit Profile </button>';
 echo '</div>';
 
 ?>
