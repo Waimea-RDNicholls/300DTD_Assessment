@@ -20,5 +20,4 @@ hx-trigger="click"
 hx-get="/messageform/'.$message['sender'].'"
 hx-target="#view-messages">Send a reply!</p>';
 
-
 ?>

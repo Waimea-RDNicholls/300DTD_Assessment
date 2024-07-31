@@ -1,5 +1,5 @@
 <?php
-
+$_SESSION['page'] = $_SERVER['HTTP_REFERER'];
 echo '<h1>'.$_SESSION['user']['name'].'</h1>'
 ?>
 
@@ -10,3 +10,5 @@ echo '<h1>'.$_SESSION['user']['name'].'</h1>'
     >
         Loading filter...
     </article>
+    <?php
+    var_dump($_SESSION['page']); ?>

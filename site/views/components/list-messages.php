@@ -17,6 +17,7 @@ catch (PDOException $e) {
     die('There was an error when connecting to the database');
 }
 
+
 echo '<ul>';
 
 foreach($messages as $message) {
@@ -24,6 +25,7 @@ foreach($messages as $message) {
     hx-trigger="click"
     hx-get="/viewmessage/'.$message['id'].'"
     hx-target="#view-messages"
+    hx-swap="innerHTML"
     
     >'.$message['title'].' from '.$message['username'].'</p>';
 }

@@ -24,6 +24,7 @@ session_start();
 // Check which type of user we are
 $userName   = $_SESSION['user']['name']     ?? 'Guest';
 $isLoggedIn = $_SESSION['user']['loggedIn'] ?? false;
+$_SESSION['page'] = $_SERVER['HTTP_REFERER'];
 
 
 

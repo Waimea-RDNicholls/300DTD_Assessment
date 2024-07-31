@@ -14,3 +14,23 @@
     <label>Text</label>
     <input name="text" type="text" required>
     <input type="submit" value="Send">
+  
+
+
+
+
+    <!-- do some page history stuff here to check if you were last on the message list or the filter list -->
+    <?php
+    if ($_SESSION['page'] == "https://dt.waimea.school.nz/~rdnicholls/300DTD/300DTD_Assessment/site/filter") {
+    echo '<button hx-get="/filterlist"
+    hx-trigger="click"
+    hx-target="#view-filter"
+    hx-swap="innerHTML">Back</button>';
+    }
+    else {
+    echo '<button hx-get="/messagelist"
+    hx-trigger="click"
+    hx-target="#view-messages"
+    hx-swap="innerHTML">Back</button>';
+    }
+    var_dump($_SESSION['page']);

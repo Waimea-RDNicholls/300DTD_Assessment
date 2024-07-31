@@ -46,3 +46,8 @@
     <input name="desc" type="text" required value="<?=$desc  ?>">
 
     <input type="submit" value="Edit">
+
+    <button hx-get="/userdetails"
+    hx-trigger="click"
+    hx-target="#view-details"
+    hx-swap="innerHTML">Back</button>

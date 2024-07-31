@@ -11,8 +11,7 @@
 
         <main>
 
-            <?php require $pageContent;
-            require 'back-button.php'; ?>
+            <?php require $pageContent; ?>
         
         </main>
 
