@@ -121,9 +121,51 @@ This design is obviously in the early stages, but I feel it can be improved and 
 
 I also had a long conversation with my end users (ignore the highly dangerous swear word I accidentally left it) as shown by this video: link coming i havent uploaded it
 
-Based on this feedback, I'll make sure to adjust the home page to act as the search screen for the user. I've also made the profile button the username, as suggested.
+Based on this feedback, I'll make sure to adjust the home page to act as the search screen for the user.
+I acted on the feedback today, as well. The profile button has been adjusted to be the username of the user. From this: 
+![Alt text](images/nav1.png)
+to this:
+![Alt text](images/nav2.png)
+and I also made changes to the way the filtered list of users you can play with presents itself. Now, it shows every user who can play with you, and you click on their name to see what times you can play with them. The filtered list of users now looks like this:
+![Alt text](images/filteredlist.png)
+![Alt text](images/schedules.png)
 
 
+
+
+### 02/08/2024
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+
+> Replace this text with any user feedback / comments
+
+Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+
+
+
+### 02/08/2024
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+
+> Replace this text with any user feedback / comments
+
+Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+
+
+
+### 02/08/2024
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+
+> Replace this text with any user feedback / comments
+
+Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
 
 
 
