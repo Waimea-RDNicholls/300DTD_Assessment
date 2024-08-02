@@ -13,11 +13,14 @@ catch (PDOException $e) {
     die('There was an error when connecting to the database');
 }
 
-echo '<h>'.$message['title'].'</h>';
-echo '<p>'.$message['text'].'</p>';
+echo '<h id=msg_details_title>'.$message['title'].'</h>';
+echo '<p id=msg_details_text>'.$message['text'].'</p>';
 echo '<p
 hx-trigger="click"
 hx-get="/messageform/'.$message['sender'].'"
 hx-target="#view-messages">Send a reply!</p>';
-
+echo '<button hx-get="/messagelist"
+hx-trigger="click"
+hx-target="#view-messages"
+hx-swap="innerHTML">Back</button>';
 ?>

@@ -18,13 +18,13 @@ hx-trigger="load">
         Loading schedules...
     </article>
 
-<div>
+<div id="scheduling">
     <!-- replace this with a button asking if you want to create a schedule -->
-    <p
-    id="scheduling"
+    <button
         hx-get="/scheduleform"
-        hx-trigger="load"
-        hx-swap="innerHTML">lets do some scheduling!</p>
+        hx-trigger="click"
+        hx-target="#scheduling"
+        hx-swap="innerHTML">Create a Schedule!</button>
 </div>
 <?php
     var_dump($_SESSION['page']); ?>

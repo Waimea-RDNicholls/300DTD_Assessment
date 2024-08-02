@@ -95,7 +95,7 @@ The first higher level flow design will be used. I'll focus on simpler colours f
 ![Alt text](images/design1.png)
 Also made a rough figma draft of the actual website, to be discussed with the end users.
 
-### DATE HERE
+### 06//06/2024
 
 Got more end user feedback on higher level flow as well as some design choices from ReptileMan1234 (formerly totallywaffles)
 ![Alt text](images/userfeedback_2.png)
@@ -110,7 +110,24 @@ The higher level flow remains relatively similar, but you can immediately search
 
 
 
-### DATE HERE
+### 02/08/2024
+
+Having developed much of the website's functionality, I prematurely decided to change a few aspects of the design. The message board idea I had, where it was much like a mobile phone's texting (messages from you coming in on the right side, messages from the other user coming in from the left) but I didn't really have any ideas on how to properly code it. I knew I could learn how to develop it, but I felt that it wasn't worth the time investment. Therefore, I settled for this design: 
+![Alt text](images/seemsg.png)
+![Alt text](images/msgdetail.png)
+![Alt text](images/msgform.png)
+
+This design is obviously in the early stages, but I feel it can be improved and works for the purposes of my website whilst not taking a massive time investment to get functional.
+
+I also had a long conversation with my end users (ignore the highly dangerous swear word I accidentally left it) as shown by this video: link coming i havent uploaded it
+
+Based on this feedback, I'll make sure to adjust the home page to act as the search screen for the user. I've also made the profile button the username, as suggested.
+
+
+
+
+
+### 02/08/2024
 
 Replace this test with what you are working on
 

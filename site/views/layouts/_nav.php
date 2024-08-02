@@ -10,7 +10,6 @@
         <li><a href="/">Home</a>
         <?php if ($isLoggedIn) {
         echo '<li><a href="/profile">'.$_SESSION['user']['name'].'</a>';
-        echo '<li><a href="/profile">Profile</a>';
         echo '<li><a href="/filter">Search</a>';
         echo '<li><a href="/messages">Messages</a>';
         echo '<li><a href="/logout">Logout</a>';

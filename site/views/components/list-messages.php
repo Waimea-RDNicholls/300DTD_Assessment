@@ -18,16 +18,21 @@ catch (PDOException $e) {
 }
 
 
-echo '<ul>';
+
+// to do
+// give every message it's own box to stand out more ideally
 
 foreach($messages as $message) {
-    echo '<p
+    echo '<div
     hx-trigger="click"
     hx-get="/viewmessage/'.$message['id'].'"
     hx-target="#view-messages"
     hx-swap="innerHTML"
     
-    >'.$message['title'].' from '.$message['username'].'</p>';
+    >';
+    echo '<h>'.$message['username'].'</h>';
+    echo '<p>'.$message['title'].'</p>';
+    echo '</div>';
 }
-echo '</ul>';
+
 ?>

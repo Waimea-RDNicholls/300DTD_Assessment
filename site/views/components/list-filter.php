@@ -59,6 +59,41 @@ consoleLog($users);
 
 
 echo '<ul id="filter-list">';
+// foreach($users as $user) {
+
+//     $query = 'SELECT times.start_time, times.end_time, times.userid, users.username FROM times
+//     INNER JOIN users ON times.userid = users.id
+//     WHERE userid = ?
+//     ORDER BY times.userid DESC';
+
+//     try {
+//         $stmt = $db->prepare($query);
+//         $stmt->execute([$user['id']]);
+//         $otherSchedules = $stmt->fetchAll();
+//     }
+//     catch (PDOException $e) {
+//         consoleLog($e->getMessage(), 'DB Connect', ERROR);
+//         die('There was an error when connecting to the database');
+//     }   
+
+//     foreach($otherSchedules as $otherSchedule) {
+
+//         foreach($ownSchedules as $ownSchedule) {
+    
+//             if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
+//                 echo '<li
+//                 hx-trigger="click"
+//                 hx-get="/user/'.$otherSchedule['userid'].'"
+//                 hx-target="#filter-list">'.$otherSchedule['username'].'</li>';
+//                 echo '<p>Start time: '.$otherSchedule['start_time'].' End time: '.$otherSchedule['end_time'].'</p>'; 
+//             }
+//         }
+
+
+//     }
+// }
+
+
 foreach($users as $user) {
 
     $query = 'SELECT times.start_time, times.end_time, times.userid, users.username FROM times
@@ -75,22 +110,21 @@ foreach($users as $user) {
         consoleLog($e->getMessage(), 'DB Connect', ERROR);
         die('There was an error when connecting to the database');
     }   
+foreach($otherSchedules as $otherSchedule) {
 
-    foreach($otherSchedules as $otherSchedule) {
+    foreach($ownSchedules as $ownSchedule) {
 
-        foreach($ownSchedules as $ownSchedule) {
-    
-            if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
-                echo '<li
-                hx-trigger="click"
-                hx-get="/user/'.$otherSchedule['userid'].'"
-                hx-target="#filter-list">'.$otherSchedule['username'].'</li>';
-                echo '<p>Start time: '.$otherSchedule['start_time'].' End time: '.$otherSchedule['end_time'].'</p>'; 
-            }
+        if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
+            echo '<li
+            hx-trigger="click"
+            hx-get="/validtimes/'.$otherSchedule['userid'].'"
+            hx-target="#filter-list">View '.$otherSchedule['username'].'\'s valid schedules!</li>'; 
+            break 2;
         }
-
-
     }
+
+}
 }
 echo '</ul>';
+
 ?>

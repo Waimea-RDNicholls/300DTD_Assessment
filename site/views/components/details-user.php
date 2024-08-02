@@ -21,4 +21,9 @@ hx-get="/messageform/'.$id.'"
 hx-target="#filter-list">Send a message!</p>';
 
 
+    echo '<button hx-get="/filterlist"
+    hx-trigger="click"
+    hx-target="#view-filter"
+    hx-swap="innerHTML">Back</button>';
+
 ?>
