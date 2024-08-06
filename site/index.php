@@ -47,7 +47,7 @@ $router->route(GET, HTMX, '/messagelist', 'components/list-messages.php');
 
 $router->route(GET, HTMX, '/user/$id', 'components/details-user.php');
 $router->route(GET, HTMX, '/messageform/$id', 'components/form-send-message.php');
-$router->route(GET, HTMX, '/viewschedule/$userid',    'components/view-schedule.php');
+$router->route(GET, HTMX, '/viewschedule/$userid',    'components/list-schedule.php');
 $router->route(GET, HTMX, '/validtimes/$userid',    'components/details-schedule-others.php');
 $router->route(GET, HTMX, '/viewmessage/$id',    'components/details-message.php');
 $router->route(GET, HTMX, '/formuseredit/$id',    'components/form-edit-user.php');
@@ -61,6 +61,8 @@ $router->route(POST,   HTMX, '/send_message',          'actions/send-message.php
 $router->route(POST,   HTMX, '/create_schedule',          'actions/create-schedule.php');
 
 $router->route(PUT,   HTMX, '/do_edit/$id',          'actions/edit-user.php');
+$router->route(DELETE,   HTMX, '/delete_message/$id',          'actions/delete-message.php');
+$router->route(DELETE,   HTMX, '/delete_schedule/$id',          'actions/delete-schedule.php');
 
 
 

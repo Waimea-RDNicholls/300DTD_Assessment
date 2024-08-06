@@ -33,6 +33,10 @@ foreach($messages as $message) {
     echo '<h>'.$message['username'].'</h>';
     echo '<p>'.$message['title'].'</p>';
     echo '</div>';
+    echo '<button hx-delete="/delete_message/'.$message['id'].'"
+    hx-trigger="click"
+    hx-target="#view-messages"
+    hx-swap="innerHTML">X</button>';
 }
 
 ?>

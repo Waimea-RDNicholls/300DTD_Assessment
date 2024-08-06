@@ -40,10 +40,10 @@
     </select>
 
     <label>Preferences</label>
-    <input name="preference" type="text" required value="<?=$preferences  ?>">
+    <input name="preference" type="text" maxlength="40" required value="<?=$preferences  ?>">
 
     <label>Description</label>
-    <input name="desc" type="text" required value="<?=$desc  ?>">
+    <input name="desc" type="text" maxlength="200" required value="<?=$desc  ?>">
 
     <input type="submit" value="Edit">
 

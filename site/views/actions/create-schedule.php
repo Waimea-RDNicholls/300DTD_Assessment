@@ -5,9 +5,14 @@ require_once 'lib/db.php';
 consoleLog($_POST, 'Form Data');
 
 
-
+// Get data from create schedule form
 $start = $_POST['start'];
 $end = $_POST['end'];
+$day = $_POST['day'];
+
+
+
+// Check if user has inputted invalid times (can't start after you stop)
 if ($start >= $end) {
     echo '<div id="redo">';
     echo '<p>The end time must be greater than the start time.</p>';
@@ -20,12 +25,8 @@ if ($start >= $end) {
 
 
 
+
 $userid = $_SESSION['user']['id'];
-$day = $_POST['day'];
-
-
-
-
 $db = connectToDB();
 
 $query = 'INSERT INTO times (userid, day, start_time, end_time)
@@ -35,4 +36,5 @@ $stmt = $db->prepare($query);
 $stmt->execute([$userid, $day, $start, $end]);
 
 echo '<h2>Schedule created!</h2>';
+header('HX-Redirect: ' . SITE_BASE . '/profile');
 }

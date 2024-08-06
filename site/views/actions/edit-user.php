@@ -20,3 +20,4 @@ $stmt = $db->prepare($query);
 $stmt->execute([$type, $continent, $preferences, $description, $id]);
 
 echo '<h2>Account details updated!</h2>';
+header('HX-Redirect: ' . SITE_BASE . '/profile');

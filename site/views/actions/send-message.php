@@ -19,3 +19,4 @@ $stmt = $db->prepare($query);
 $stmt->execute([$title, $text, $target, $sender]);
 
 echo '<h2>Message sent!</h2>';
+header('HX-Redirect: ' . SITE_BASE . '/messages');

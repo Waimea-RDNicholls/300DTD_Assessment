@@ -2,12 +2,12 @@
       hx-trigger="submit">
 
     <label>Username</label>
-    <input name="user" type="text" required>
+    <input name="user" type="text" maxlength="20" required>
 
 
 
     <label>Password</label>
-    <input name="pass" type="text" required>
+    <input name="pass" type="text" maxlength="20" required>
 
     <label>Type</label>
     <select name="type" required> <option value="1">Casual</option>
@@ -24,9 +24,9 @@
     </select>
 
     <label>Preferences</label>
-    <input name="preference" type="text" required>
+    <input name="preference" type="text" maxlength="40" required>
 
     <label>Description</label>
-    <input name="desc" type="text" required>
+    <input name="desc" type="text" maxlength="200" required>
 
     <input type="submit" value="Sign Up!">

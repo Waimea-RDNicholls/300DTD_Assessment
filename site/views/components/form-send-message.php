@@ -1,18 +1,18 @@
 
 
-<?var_dump($id);?>
+
 <form hx-post="/send_message"
       hx-trigger="submit">
 
     <label>Title</label>
-    <input name="title" type="text" required>
+    <input name="title" type="text" maxlength="30" required>
 
     <input type="hidden" name="sender" value="<?= $_SESSION['user']['id'] ?>">
 
     <input type="hidden" name="target" value="<?= $id ?>">
 
     <label>Text</label>
-    <input name="text" type="text" required>
+    <input name="text" type="text" maxlength="250" required>
     <input type="submit" value="Send">
   
 
@@ -33,4 +33,4 @@
     hx-target="#view-messages"
     hx-swap="innerHTML">Back</button>';
     }
-    var_dump($_SESSION['page']);
+  

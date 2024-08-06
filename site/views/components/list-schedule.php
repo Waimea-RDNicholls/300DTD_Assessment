@@ -19,8 +19,14 @@ catch (PDOException $e) {
 
 echo '<ul>';
 foreach($times as $time) {
+    echo '<li id="schedule-list">';
 
     echo '<p>You can play on '.$time['day'] .' from '.$time['start_time'].' to '.$time['end_time'].'.</p>';
+    echo '<button hx-delete="/delete_schedule/'.$time['id'].'"
+    hx-trigger="click"
+    hx-target="#schedule-list"
+    hx-swap="innerHTML">X</button>';
+    echo '</li>';
 }
 echo '</ul>';
 ?>

@@ -133,15 +133,38 @@ and I also made changes to the way the filtered list of users you can play with 
 
 
 
-### 02/08/2024
+### 06/08/2024
 
-Replace this test with what you are working on
+Added delete buttons to necessary screens. Schedules can change, and messages will start to clog up if you have too many.
+Schedule list:
+Before:
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+![Alt text](images/schedules_before.png)
 
-> Replace this text with any user feedback / comments
+After:
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+![Alt text](images/schedules_after.png)
+
+Messages:
+Before:
+![Alt text](images/msgdetail.png)
+After:
+![Alt text](images/msgdetail_after.png)
+
+Button will ideally be moved to the right, rather than being below the details.
+
+Also changed login/signup page to use buttons instead of being a massive mess where the forms just start off on the page. Now looks like:
+![Alt text](images/signup.png)
+
+Finally, fixed my forms so that you cannot exceed the maximum length allowed by the database (thereby breaking the site).  E.G:
+Before:
+![Alt text](images/formcode.png)
+After:
+![Alt text](images/formcode1.png)
+
+I have also attempted to act on user feedback by making the default page after logging in the filter page, but I feel that wasn't meeting the spirit of what they wanted.
+I'm going to gather more information about what the end user wants when he means, "The home page shows the filtered user list." to get a better picture of what to change.
+
 
 
 
