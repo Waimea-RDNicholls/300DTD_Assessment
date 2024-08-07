@@ -178,9 +178,7 @@ to go onto the messages page. This count will re-check and update every time a p
 new messages, and only display the number of un-viewed messages. So, I believe this should be a good compromise.
 ![Alt text](images/msgalert.png)
 
-> Replace this text with any user feedback / comments
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
 
 
 
