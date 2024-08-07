@@ -95,7 +95,7 @@ echo '<ul id="filter-list">';
 
 //     }
 // }
-
+$hasSchedule = 0;
 // Grab each user's individual info
 foreach($users as $user) {
 
@@ -126,6 +126,7 @@ foreach($otherSchedules as $otherSchedule) {
             hx-trigger="click"
             hx-get="/validtimes/'.$otherSchedule['userid'].'"
             hx-target="#filter-list">View '.$otherSchedule['username'].'\'s valid schedules!</li>'; 
+            $hasSchedule = 1;
             break 2;
         }
     }
@@ -133,5 +134,8 @@ foreach($otherSchedules as $otherSchedule) {
 }
 }
 echo '</ul>';
+if ($hasSchedule == 0) {
+    echo '<p>No-one matches your schedule and/or preferences.<p>';
+}
 
 ?>

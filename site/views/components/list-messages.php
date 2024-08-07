@@ -25,6 +25,7 @@ catch (PDOException $e) {
 // give every message it's own box to stand out more ideally
 
 foreach($messages as $message) {
+
     // Allow user to view more message details on click
     echo '<div
     hx-trigger="click"
@@ -42,5 +43,7 @@ foreach($messages as $message) {
     hx-target="#view-messages"
     hx-swap="innerHTML">X</button>';
 }
-
+if ($messages == NULL) {
+    echo '<p>You have no messages.<p>';
+}
 ?>

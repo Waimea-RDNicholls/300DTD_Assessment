@@ -168,11 +168,15 @@ I'm going to gather more information about what the end user wants when he means
 
 
 
-### 02/08/2024
+### 08/08/2024
 
-Replace this test with what you are working on
+Added display if user has no messages, to tell them they don't:
+![Alt text](images/msg.png)
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+More specifically, I attempted to act on user feedback about the message display. Now the user will see how many messages they have without needing
+to go onto the messages page. This count will re-check and update every time a page refreshes. I couldn't figure out how to make it only show when you have
+new messages, and only display the number of un-viewed messages. So, I believe this should be a good compromise.
+![Alt text](images/msgalert.png)
 
 > Replace this text with any user feedback / comments
 
