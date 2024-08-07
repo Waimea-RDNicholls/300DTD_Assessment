@@ -1,6 +1,8 @@
 <?php
 require_once 'lib/db.php';
 $db = connectToDB();
+
+// Grab all messages sent to logged in user
 $target = $_SESSION['user']['id'];
 
 $query = 'SELECT messages.title, messages.id, users.username FROM messages
@@ -23,6 +25,7 @@ catch (PDOException $e) {
 // give every message it's own box to stand out more ideally
 
 foreach($messages as $message) {
+    // Allow user to view more message details on click
     echo '<div
     hx-trigger="click"
     hx-get="/viewmessage/'.$message['id'].'"
@@ -33,6 +36,7 @@ foreach($messages as $message) {
     echo '<h>'.$message['username'].'</h>';
     echo '<p>'.$message['title'].'</p>';
     echo '</div>';
+    // Delete message
     echo '<button hx-delete="/delete_message/'.$message['id'].'"
     hx-trigger="click"
     hx-target="#view-messages"

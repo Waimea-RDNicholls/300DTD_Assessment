@@ -7,6 +7,8 @@
     
 else: ?>
 
+
+<!-- Show buttons to login/sign up if not logged in -->
     <h1>Welcome to GameLinker!</h1>
 <p>It seems you aren't signed in.</p>
 <div id="not_logged_in">
@@ -27,7 +29,6 @@ else: ?>
     <p>Confused on where to start? Here are some commonly asked questions!</p>
     <ul>
         <li>What time system does the site use? 24 hour time.</li>
-        <li>How do I view messages, or someone's schedules? Click on the text of the message.</li>
 
 
 

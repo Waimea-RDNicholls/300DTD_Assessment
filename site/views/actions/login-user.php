@@ -33,13 +33,27 @@ if ($userData) {
         // Go to home page
         header('HX-Redirect: ' . SITE_BASE . '/filter');
     }
+    // Login failure? Show button to show login form again.
     else {
         echo '<h2>Incorrect password.</h2>';
+    
+        echo '<button
+        hx-get="/login"
+        hx-replace="innerHTML"
+        hx-target="#not_logged_in"
+        hx-trigger="click"
+        >Try Again</button>';
     }
 
 }
 else {
     echo '<h2>Sorry, that username does not exist.</h2>';
+    echo '<button
+    hx-get="/login"
+    hx-replace="innerHTML"
+    hx-target="#not_logged_in"
+    hx-trigger="click"
+    >Try Again</button>';
 }
 // header('HX-Redirect: ' . SITE_BASE . '/home');
 

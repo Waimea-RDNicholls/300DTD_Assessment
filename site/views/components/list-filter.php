@@ -2,6 +2,8 @@
 require_once 'lib/db.php';
 $db = connectToDB();
 
+
+// Grab logged in user's schedules
 $id = $_SESSION['user']['id'];
 $query = 'SELECT start_time, end_time FROM times WHERE userid = ?';
 
@@ -15,7 +17,7 @@ catch (PDOException $e) {
     die('There was an error when connecting to the database');
 }
 
-
+// Grab all other user details
 $query = 'SELECT type, continent, preferences FROM users WHERE id = ?';
 
 try {
@@ -36,7 +38,8 @@ $continent = $userDetails['continent'];
 $preferences = $userDetails['preferences'];
 
 
-
+// Grab every other user who is same type of gamer, from same continent, and has same preferences
+// As long as they're a different user
 $query = 'SELECT id, username, type, continent FROM users 
 WHERE type = ?
 AND continent = ?
@@ -93,7 +96,7 @@ echo '<ul id="filter-list">';
 //     }
 // }
 
-
+// Grab each user's individual info
 foreach($users as $user) {
 
     $query = 'SELECT times.start_time, times.end_time, times.userid, users.username FROM times
@@ -110,11 +113,15 @@ foreach($users as $user) {
         consoleLog($e->getMessage(), 'DB Connect', ERROR);
         die('There was an error when connecting to the database');
     }   
+    // Compare logged in user's schedules to other users schedules
 foreach($otherSchedules as $otherSchedule) {
 
     foreach($ownSchedules as $ownSchedule) {
 
+        // If users have an overlap in availability...
         if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
+
+            // Display their name as a valid option to click
             echo '<li
             hx-trigger="click"
             hx-get="/validtimes/'.$otherSchedule['userid'].'"

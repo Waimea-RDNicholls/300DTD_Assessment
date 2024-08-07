@@ -5,6 +5,7 @@ require_once 'lib/db.php';
 consoleLog($_POST, 'Form Data');
 
 $db = connectToDB();
+// Delete schedule from times
 $query = 'DELETE FROM times WHERE id = ?';
             
 
@@ -17,4 +18,5 @@ $query = 'DELETE FROM times WHERE id = ?';
                 die('There was an error when deleting item from database');
             }
             echo '<p>Schedule deleted!</p>';
+            // Update page
             header('HX-Redirect: ' . SITE_BASE . '/profile');

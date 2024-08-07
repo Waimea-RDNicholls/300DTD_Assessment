@@ -5,6 +5,8 @@ require_once 'lib/db.php';
 consoleLog($_POST, 'Form Data');
 
 $db = connectToDB();
+
+// Delete message from database
 $query = 'DELETE FROM messages WHERE id = ?';
             
 
@@ -17,4 +19,5 @@ $query = 'DELETE FROM messages WHERE id = ?';
                 die('There was an error when deleting item from database');
             }
             echo '<p>Message deleted!</p>';
+            // Update page
             header('HX-Redirect: ' . SITE_BASE . '/messages');

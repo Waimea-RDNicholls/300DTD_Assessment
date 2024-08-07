@@ -25,7 +25,7 @@ if ($start >= $end) {
 
 
 
-
+// Insert schedule into database
 $userid = $_SESSION['user']['id'];
 $db = connectToDB();
 
@@ -36,5 +36,7 @@ $stmt = $db->prepare($query);
 $stmt->execute([$userid, $day, $start, $end]);
 
 echo '<h2>Schedule created!</h2>';
+
+// Reload page to display new schedule
 header('HX-Redirect: ' . SITE_BASE . '/profile');
 }

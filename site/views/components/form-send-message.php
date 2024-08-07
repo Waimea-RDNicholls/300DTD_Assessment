@@ -19,8 +19,9 @@
 
 
 
-    <!-- do some page history stuff here to check if you were last on the message list or the filter list -->
+
     <?php
+    // Check page history. Given only two ways to get to this form, if user did not come from filter, return to message list.
     if ($_SESSION['page'] == "https://dt.waimea.school.nz/~rdnicholls/300DTD/300DTD_Assessment/site/filter") {
     echo '<button hx-get="/filterlist"
     hx-trigger="click"
