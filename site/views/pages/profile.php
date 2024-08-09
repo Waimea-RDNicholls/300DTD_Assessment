@@ -26,5 +26,3 @@ hx-trigger="load">
         hx-target="#scheduling"
         hx-swap="innerHTML">Create a Schedule!</button>
 </div>
-<?php
-    var_dump($_SESSION['page']); ?>

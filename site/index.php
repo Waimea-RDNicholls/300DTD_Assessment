@@ -82,6 +82,9 @@ $router->route(GET, HTMX, '/viewmessage/$id',    'components/details-message.php
 $router->route(GET, HTMX, '/user/$id', 'components/details-user.php');
 $router->route(GET, HTMX, '/userdetails',    'components/details-profile.php');
 
+// Login/signup form back button
+$router->route(GET,   HTMX, '/refresh',          'actions/refresh-home.php');
+
 
 // Do create/delete/edit
 $router->route(POST,   HTMX, '/do_register',          'actions/create-user.php');

@@ -30,3 +30,7 @@
     <input name="desc" type="text" maxlength="200" required>
 
     <input type="submit" value="Sign Up!">
+
+    <button
+    hx-get="/refresh"
+    hx-trigger="click">Back</button>

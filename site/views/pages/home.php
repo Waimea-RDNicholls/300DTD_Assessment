@@ -3,6 +3,9 @@
 
 <?php if ($isLoggedIn): 
     echo '<h1>Welcome,  '.$_SESSION['user']['name'].'</h1>';
+    echo'<p>Confused on where to start? Here are some commonly asked questions!</p>';
+    echo '<ul>';
+    echo    '<li>What time system does the site use? 24 hour time.</li>';
 
     
 else: ?>
@@ -25,10 +28,7 @@ else: ?>
         hx-trigger="click">Log In!</button>
 </div>
 <?php endif; ?>
-<h>Welcome to GameLinker!<h>
-    <p>Confused on where to start? Here are some commonly asked questions!</p>
-    <ul>
-        <li>What time system does the site use? 24 hour time.</li>
+
 
 
 

@@ -9,5 +9,3 @@ echo '<h1>Message list for '.$_SESSION['user']['name'].'</h1>'
     >
         Loading messages...
     </article>
-    <?php
-    var_dump($_SESSION['page']); ?>

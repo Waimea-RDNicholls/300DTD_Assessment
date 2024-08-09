@@ -1,0 +1,1 @@
+<?php header('HX-Redirect: ' . SITE_BASE . '/'); ?>

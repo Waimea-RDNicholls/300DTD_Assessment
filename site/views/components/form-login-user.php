@@ -14,5 +14,5 @@
     <input type="submit" value="Login">
 </form>
 <button
-HX-Refresh="true"
+    hx-get="/refresh"
     hx-trigger="click">Back</button>

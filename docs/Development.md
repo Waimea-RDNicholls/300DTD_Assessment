@@ -175,7 +175,8 @@ Added display if user has no messages, to tell them they don't:
 
 More specifically, I attempted to act on user feedback about the message display. Now the user will see how many messages they have without needing
 to go onto the messages page. This count will re-check and update every time a page refreshes. I couldn't figure out how to make it only show when you have
-new messages, and only display the number of un-viewed messages. So, I believe this should be a good compromise.
+new messages, and only display the number of un-viewed messages. However, this still tells you how many messages you have,
+and it encourages users to delete messages after reading (preventing major clogging). So, I believe this should be a good compromise.
 ![Alt text](images/msgalert.png)
 
 
@@ -184,13 +185,10 @@ new messages, and only display the number of un-viewed messages. So, I believe t
 
 ### 02/08/2024
 
-Replace this test with what you are working on
+Added a functional back button to the login/signup forms:
+![Alt text](images/back.png)
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
 
-> Replace this text with any user feedback / comments
-
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
 
 
 
