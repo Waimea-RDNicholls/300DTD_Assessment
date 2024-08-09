@@ -183,16 +183,88 @@ and it encourages users to delete messages after reading (preventing major clogg
 
 
 
-### 02/08/2024
+### 09/08/2024
 
 Added a functional back button to the login/signup forms:
 ![Alt text](images/back.png)
+Now the user doesn't have to hit the home button in order to return to the signup/login page.
 
 
 
 
+### 10/08/2024
 
-### 02/08/2024
+Had a meeting with my end users:
+
+
+
+
+### 10/08/2024
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+
+> Replace this text with any user feedback / comments
+
+Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+
+
+
+
+### 10/08/2024
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+
+> Replace this text with any user feedback / comments
+
+Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+
+
+
+
+### 10/08/2024
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+
+> Replace this text with any user feedback / comments
+
+Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+
+
+
+
+### 10/08/2024
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+
+> Replace this text with any user feedback / comments
+
+Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+
+
+
+
+### 10/08/2024
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+
+> Replace this text with any user feedback / comments
+
+Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+
+
+
+
+### 10/08/2024
 
 Replace this test with what you are working on
 
