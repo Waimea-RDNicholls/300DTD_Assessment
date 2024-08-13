@@ -3,9 +3,12 @@
 
 <?php if ($isLoggedIn): 
     echo '<h1>Welcome,  '.$_SESSION['user']['name'].'</h1>';
-    echo'<p>Confused on where to start? Here are some commonly asked questions!</p>';
-    echo '<ul>';
-    echo    '<li>What time system does the site use? 24 hour time.</li>';
+    echo '<div id="logged_in"
+    hx-get="/info"
+    hx-replace="innerHTML"
+    hx-target="#logged_in"
+    hx-trigger="load">';
+    echo '</div>';
 
     
 else: ?>
@@ -26,7 +29,15 @@ else: ?>
         hx-replace="innerHTML"
         hx-target="#not_logged_in"
         hx-trigger="click">Log In!</button>
+
+    <button
+    hx-get="/info"
+    hx-replace="innerHTML"
+    hx-target="#not_logged_in"
+    hx-trigger="click">About us</button>
 </div>
+
+
 <?php endif; ?>
 
 

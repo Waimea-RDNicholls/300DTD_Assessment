@@ -92,11 +92,15 @@ article {
 
 /* MESSAGE LIST ---------------------------------------- */
 
-
+#msg_list:hover {
+    background-color: brown;
+}
 
 /* FILTER LIST ---------------------------------------- */
 
-
+#filter-list:hover {
+    background-color: brown;
+}
 
 /* SCHEDULES ---------------------------------------- */
 

@@ -27,7 +27,7 @@ catch (PDOException $e) {
 foreach($messages as $message) {
 
     // Allow user to view more message details on click
-    echo '<div
+    echo '<article id="msg_list"
     hx-trigger="click"
     hx-get="/viewmessage/'.$message['id'].'"
     hx-target="#view-messages"
@@ -36,12 +36,14 @@ foreach($messages as $message) {
     >';
     echo '<h>'.$message['username'].'</h>';
     echo '<p>'.$message['title'].'</p>';
-    echo '</div>';
+
     // Delete message
-    echo '<button hx-delete="/delete_message/'.$message['id'].'"
+    echo '<button 
+    hx-delete="/delete_message/'.$message['id'].'"
     hx-trigger="click"
     hx-target="#view-messages"
     hx-swap="innerHTML">X</button>';
+    echo '</article>';
 }
 if ($messages == NULL) {
     echo '<p>You have no messages.<p>';

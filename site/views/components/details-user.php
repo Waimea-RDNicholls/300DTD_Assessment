@@ -18,10 +18,10 @@ catch (PDOException $e) {
 echo '<h>'.$user['username'].'</h>';
 echo '<p>'.$user['description'].'</p>';
 // Send message to selected user
-echo '<p
+echo '<button
 hx-trigger="click"
 hx-get="/messageform/'.$id.'"
-hx-target="#filter-list">Send a message!</p>';
+hx-target="#view-filter">Send a message!</button>';
 
     // Back button
     echo '<button hx-get="/filterlist"

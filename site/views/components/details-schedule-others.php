@@ -43,11 +43,12 @@ catch (PDOException $e) {
     
             // Display if the users schedules have an overlap in availability
             if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
-                echo '<li
+                echo '<article
+                id="filter-list"
                 hx-trigger="click"
                 hx-get="/user/'.$otherSchedule['userid'].'"
-                hx-target="#filter-list">'.$otherSchedule['username'].' can play on 
-                '.$otherSchedule['day'].' from '.$otherSchedule['start_time'].' to '.$otherSchedule['end_time'].'.</li>';
+                hx-target="#view-filter">'.$otherSchedule['username'].' can play on 
+                '.$otherSchedule['day'].' from '.$otherSchedule['start_time'].' to '.$otherSchedule['end_time'].'.</article>';
             }
         }
 

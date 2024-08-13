@@ -60,8 +60,6 @@ consoleLog($users);
 
 
 
-
-echo '<ul id="filter-list">';
 // foreach($users as $user) {
 
 //     $query = 'SELECT times.start_time, times.end_time, times.userid, users.username FROM times
@@ -122,10 +120,11 @@ foreach($otherSchedules as $otherSchedule) {
         if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
 
             // Display their name as a valid option to click
-            echo '<li
+            echo '<article
+            id="filter-list"
             hx-trigger="click"
             hx-get="/validtimes/'.$otherSchedule['userid'].'"
-            hx-target="#filter-list">View '.$otherSchedule['username'].'\'s valid schedules!</li>'; 
+            hx-target="#view-filter">Click to view '.$otherSchedule['username'].'\'s valid schedules!</article>'; 
             $hasSchedule = 1;
             break 2;
         }
@@ -133,7 +132,6 @@ foreach($otherSchedules as $otherSchedule) {
 
 }
 }
-echo '</ul>';
 if ($hasSchedule == 0) {
     echo '<p>No-one matches your schedule and/or preferences.<p>';
 }

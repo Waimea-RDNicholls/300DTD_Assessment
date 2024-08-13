@@ -80,9 +80,6 @@ Note to self: refer to https://www.flux-academy.com/blog/how-to-strategically-us
 Second note to self: refer to https://lawsofux.com/
 
 
-<!-- > Replace this text with any user feedback / comments
-
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc. -->
 
 ### 31/05/2024
 
@@ -192,23 +189,23 @@ Now the user doesn't have to hit the home button in order to return to the signu
 
 
 
-### 10/08/2024
+### 11/08/2024
 
-Had a meeting with my end users:
+Had a meeting with my end users, where we went over changes. Video here:
+User recommended replacing the home page with a help or FAQ page, maybe describing the website and what it does.
 
 
 
 
-### 10/08/2024
+### 13/08/2024
 
-Replace this test with what you are working on
+I addressed the user's feedback, by adding an "About Us" button to the home page that users see before logging in. I then remade the home page to be more of an info page,
+in line with user feedback, providing a rough overview of what the app does and how to use it.
+![Alt text](images/home.png)
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
-
-> Replace this text with any user feedback / comments
-
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
-
+I also began working on the website design and CSS. I split up the lists into distinct buttons that change colour when hovered over (placeholder colours):
+![Alt text](images/hoverbutton.png)
+I'll be using the colour palette my end user said to at the start, before getting some finalised feedback on colour design.
 
 
 

@@ -19,7 +19,7 @@ catch (PDOException $e) {
 }
 // Display profile details
 echo '<div id="userinfo">';
-echo '<p>'.$user['preferences'].'</p>';
+echo '<p>Boardgame you\'re looking to play: '.$user['preferences'].'</p>';
 echo '<p>'.$user['description'].'</p>';
 
 // Create form to allow profile edit

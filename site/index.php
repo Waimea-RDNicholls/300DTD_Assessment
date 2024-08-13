@@ -81,6 +81,7 @@ $router->route(GET, HTMX, '/validtimes/$userid',    'components/details-schedule
 $router->route(GET, HTMX, '/viewmessage/$id',    'components/details-message.php');
 $router->route(GET, HTMX, '/user/$id', 'components/details-user.php');
 $router->route(GET, HTMX, '/userdetails',    'components/details-profile.php');
+$router->route(GET, HTMX, '/info',    'components/details-home-info.php');
 
 // Login/signup form back button
 $router->route(GET,   HTMX, '/refresh',          'actions/refresh-home.php');
