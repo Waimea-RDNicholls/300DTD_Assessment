@@ -85,6 +85,7 @@ $router->route(GET, HTMX, '/info',    'components/details-home-info.php');
 
 // Login/signup form back button
 $router->route(GET,   HTMX, '/refresh',          'actions/refresh-home.php');
+$router->route(GET,   HTMX, '/refreshfilter',          'actions/refresh-filter.php');
 
 
 // Do create/delete/edit
@@ -100,7 +101,6 @@ $router->route(DELETE,   HTMX, '/delete_schedule/$id',          'actions/delete-
 
 
 
-$router->route(GET, PAGE, '/about', 'pages/about.php');
 $router->route(GET, PAGE, '/logout', 'actions/logout-user.php');
 
 

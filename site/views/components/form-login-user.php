@@ -1,7 +1,8 @@
 
 
 
-<form hx-post="/do_login"
+<form autocomplete="off"
+     hx-post="/do_login"
       hx-trigger="submit">
 
     <label>Username</label>
@@ -10,7 +11,7 @@
 
 
     <label>Password</label>
-    <input name="pass" type="text" maxlength="20" required>
+    <input name="pass" type="password" maxlength="20" required>
     <input type="submit" value="Login">
 </form>
 <button

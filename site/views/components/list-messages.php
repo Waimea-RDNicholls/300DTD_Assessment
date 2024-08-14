@@ -34,8 +34,8 @@ foreach($messages as $message) {
     hx-swap="innerHTML"
     
     >';
-    echo '<h>'.$message['username'].'</h>';
-    echo '<p>'.$message['title'].'</p>';
+    echo '<h>From '.$message['username'].'</h>';
+    echo '<p>Title: '.$message['title'].'</p>';
 
     // Delete message
     echo '<button 

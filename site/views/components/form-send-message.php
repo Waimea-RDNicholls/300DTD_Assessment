@@ -1,7 +1,8 @@
 
 
 
-<form hx-post="/send_message"
+<form autocomplete="off"
+      hx-post="/send_message"
       hx-trigger="submit">
 
     <label>Title</label>

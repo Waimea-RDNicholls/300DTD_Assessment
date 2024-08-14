@@ -1,122 +1,195 @@
 :root {
     --font-size:         1rem;
-
-
-
-    --button-colour: #98C8E0;
-
-    --border-color:      var(--pico-muted-border-color);
+ 
+    /* --border-color:      var(--pico-muted-border-color);
     --accent-color:      var(--pico-color-pumpkin);
+ 
+    --link-active-color: var(--accent-color); */
+ 
+    --border-colour: black;
+    --background-colour: #0F2733;
+    --text-colour: white;
+ 
+ 
+    --button-colour: #376177;
+    --button-text-colour: black;
+    --button-border-colour: black;
+ 
+ 
+    --button-hover-colour: #6992a7;
+    --button-hover-text-colour: black;
+ 
+    --delete-button-colour: rgb(190, 22, 22);
+    --delete-button-text-colour: white;
+    --delete-button-hover-colour: rgb(238, 36, 36);
 
-    --link-active-color: var(--accent-color);
+    --schedule-display-colour: white;
+ 
+ 
+ 
+ 
 }
-
-
+ 
+* {
+    color: var(--text-colour);
+}
+ 
+/* find a way to disable pico's default colour so all text is white
+ 
+ALT FIX > invert colour scheme to be lighter (not pag but it'll do i guess)*/
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: var(--background-colour);
 }
-
-
+ 
+ 
 /* HEADER ---------------------------------------- */
-
+ 
 #main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-colour);
     margin-bottom: 2rem;
 }
-
+ 
 #main-header > * {
     margin: 0;
 }
-
+ 
 #main-header > a {
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
     color: inherit;
 }
-
-
+ 
+ 
 /* FOOTER ---------------------------------------- */
-
+ 
 #main-footer {
     text-align: center;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-colour);
     margin-top: 2rem;
 }
-
-
+ 
+ 
 /* NAV ---------------------------------------- */
-
-#main-nav {
+ 
+#main-nav {    
     align-items: center;
     font-size: 1.1rem;
 }
-
+ 
 #main-nav menu {
     margin: 0;
 }
-
-
+ 
 #main-nav a[aria-current="page"] {
     color: var(--link-active-color);
     text-decoration: underline;
 }
-
-
+ 
+ 
 /* MAIN ---------------------------------------- */
-
+ 
 main {
     flex: 1;
     max-width: 60rem;
+    color: var(--text-colour);
 }
-
-
+ 
+h1 {
+    font-size: 20px;
+}
+ 
+ 
 /* LAYOUT ---------------------------------------- */
-
+ 
 section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 2rem;
 }
-
+ 
 article {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--button-border-colour);
     min-height: 6rem;
 }
-
-
+ 
+ 
 /* LOGIN/SIGNUP FORM ---------------------------------------- */
-
-
-
+ 
+ 
+ 
 /* MESSAGE LIST ---------------------------------------- */
-
+#msg_list {
+    position: relative;
+    color: var(--button-text-colour);
+    background-color: var(--button-colour);
+}
 #msg_list:hover {
-    background-color: brown;
+    background-color: var(--button-hover-colour);
 }
-
+ 
 /* FILTER LIST ---------------------------------------- */
-
-#filter-list:hover {
-    background-color: brown;
+#filter-list {
+    color: var(--button-text-colour);
+    background-color: var(--button-colour);
 }
-
+#filter-list:hover {
+    background-color: var(--button-hover-colour);
+}
+ 
 /* SCHEDULES ---------------------------------------- */
+#view-schedule *    {
+    list-style-type: none;
+    color: var(--button-text-colour);
+}
+#view-schedule {
+    background-color: var(--schedule-display-colour);
 
-
-
+}
+#view-schedule li {
+    display: flex;
+    border-color: var(--border-colour);
+    justify-content: space-evenly;
+    background-color: var(--schedule-display-colour);
+    position: relative;
+    padding: 1rem;
+}
+ 
+ 
 /* MAIN ---------------------------------------- */
-
-
-
-/* BUTTONS ---------------------------------------- */
-
+ 
+h1{
+    color: var(--text-colour);
+}
+ 
+p {
+    color: var(--text-colour);
+}
+ 
+ 
+/* BUTTONS -------------------------------------- */
 button {
     background-color: var(--button-colour);
-    color: var(--button-colour);
+    color: var(--button-text-colour);
+    border-color: var(--button-border-colour);
+}
+button:hover {
+    background-color: var(--button-hover-colour);
+}
+ 
+.delete-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--delete-button-colour);
+    color: var(--delete-button-text-colour);
+}
+.delete-button:hover {
+    background-color: var(--delete-button-hover-colour);
 }

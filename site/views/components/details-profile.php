@@ -25,7 +25,7 @@ echo '<p>'.$user['description'].'</p>';
 // Create form to allow profile edit
 echo '<button   hx-trigger="click"
                 hx-get="/formuseredit/'.$id.'"
-                hx-target="#userinfo">
+                hx-target="#view-details">
                 Edit Profile </button>';
 echo '</div>';
 

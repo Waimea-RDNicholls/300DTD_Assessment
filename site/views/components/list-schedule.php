@@ -23,9 +23,10 @@ foreach($times as $time) {
 
     echo '<p>You can play on '.$time['day'] .' from '.$time['start_time'].' to '.$time['end_time'].'.</p>';
     // Delete schedule
-    echo '<button hx-delete="/delete_schedule/'.$time['id'].'"
+    echo '<button class="delete-button"
+    hx-delete="/delete_schedule/'.$time['id'].'"
     hx-trigger="click"
-    hx-target="#schedule-list"
+    hx-target="#view-schedule"
     hx-swap="innerHTML">X</button>';
     echo '</li>';
 }

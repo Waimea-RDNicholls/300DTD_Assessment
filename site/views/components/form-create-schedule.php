@@ -1,4 +1,5 @@
-<form hx-post="/create_schedule"
+<form autocomplete="off"
+      hx-post="/create_schedule"
       hx-trigger="submit"
       hx-swap="innerHTML">
 

@@ -1,4 +1,5 @@
-<form   hx-put="/do_edit/<?= $id ?>"
+<form   autocomplete="off"
+        hx-put="/do_edit/<?= $id ?>"
         hx-trigger="submit"
         hx-target="#userinfo">
 
