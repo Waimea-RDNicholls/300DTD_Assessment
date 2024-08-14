@@ -1,6 +1,10 @@
 :root {
     --font-size:         1rem;
 
+
+
+    --button-colour: #98C8E0;
+
     --border-color:      var(--pico-muted-border-color);
     --accent-color:      var(--pico-color-pumpkin);
 
@@ -109,3 +113,10 @@ article {
 /* MAIN ---------------------------------------- */
 
 
+
+/* BUTTONS ---------------------------------------- */
+
+button {
+    background-color: var(--button-colour);
+    color: var(--button-colour);
+}
