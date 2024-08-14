@@ -39,6 +39,7 @@ foreach($messages as $message) {
 
     // Delete message
     echo '<button 
+    class="delete-button"
     hx-delete="/delete_message/'.$message['id'].'"
     hx-trigger="click"
     hx-target="#view-messages"

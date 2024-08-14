@@ -192,4 +192,5 @@ button:hover {
 }
 .delete-button:hover {
     background-color: var(--delete-button-hover-colour);
+    color: var(--delete-button-text-colour);
 }
