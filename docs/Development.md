@@ -116,7 +116,7 @@ Having developed much of the website's functionality, I prematurely decided to c
 
 This design is obviously in the early stages, but I feel it can be improved and works for the purposes of my website whilst not taking a massive time investment to get functional.
 
-I also had a long conversation with my end users (ignore the highly dangerous swear word I accidentally left it) as shown by this video: link coming i havent uploaded it
+I also had a long conversation with my end users (ignore the highly dangerous swear word I accidentally left it) as shown by this video: https://www.youtube.com/watch?v=z-tSIrQqpuo
 
 Based on this feedback, I'll make sure to adjust the home page to act as the search screen for the user.
 I acted on the feedback today, as well. The profile button has been adjusted to be the username of the user. From this: 
@@ -191,7 +191,7 @@ Now the user doesn't have to hit the home button in order to return to the signu
 
 ### 11/08/2024
 
-Had a meeting with my end users, where we went over changes. Video here:
+Had a meeting with my end users, where we went over changes. Video here: https://youtu.be/jAH_M5KCB_s
 User recommended replacing the home page with a help or FAQ page, maybe describing the website and what it does.
 
 
@@ -209,15 +209,10 @@ I'll be using the colour palette my end user said to at the start, before gettin
 
 
 
-### 10/08/2024
+### 15/08/2024
 
-Replace this test with what you are working on
-
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
-
-> Replace this text with any user feedback / comments
-
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+Final discussion with end users, having fixed up the website and made final design touches: https://youtu.be/n6h0BVZvIkk
+I will change the text colour in accordance with what they want.
 
 
 

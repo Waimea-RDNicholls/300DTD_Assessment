@@ -31,7 +31,7 @@ echo '</div>';
 
 // Display all users schedules
 echo '<article id="view-schedule"
-hx-get="/viewschedule/'.$userid.'"
+hx-get="/viewschedule/'.$id.'"
 hx-trigger="load">
 Loading schedules...
 </article>';
