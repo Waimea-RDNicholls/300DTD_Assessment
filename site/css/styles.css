@@ -12,7 +12,7 @@
  
  
     --button-colour: #376177;
-    --button-text-colour: black;
+    --button-text-colour: white;
     --button-border-colour: black;
  
  
@@ -24,6 +24,7 @@
     --delete-button-hover-colour: rgb(238, 36, 36);
 
     --schedule-display-colour: white;
+    --schedule-text-colour: black;
  
  
  
@@ -165,7 +166,7 @@ form label {
     padding: 1rem;
 }
 #view-schedule li p {
-    color: var(--button-text-colour);
+    color: var(--schedule-text-colour);
 }
  
  
