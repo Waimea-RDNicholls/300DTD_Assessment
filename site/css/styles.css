@@ -146,7 +146,6 @@ article {
 /* SCHEDULES ---------------------------------------- */
 #view-schedule *    {
     list-style-type: none;
-    color: var(--button-text-colour);
 }
 #view-schedule {
     background-color: var(--schedule-display-colour);
@@ -159,6 +158,9 @@ article {
     background-color: var(--schedule-display-colour);
     position: relative;
     padding: 1rem;
+}
+#view-schedule li p {
+    color: var(--button-text-colour);
 }
  
  

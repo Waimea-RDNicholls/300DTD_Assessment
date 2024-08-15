@@ -15,7 +15,7 @@ catch (PDOException $e) {
 }
 
 // Display info
-echo '<h>'.$user['username'].'</h>';
+echo '<h1>Username: '.$user['username'].'</h1>';
 echo '<p>'.$user['description'].'</p>';
 // Send message to selected user
 echo '<button
