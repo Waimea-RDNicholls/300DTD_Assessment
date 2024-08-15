@@ -1,6 +1,3 @@
-
-
-
 <form autocomplete="off"
       hx-post="/send_message"
       hx-trigger="submit">

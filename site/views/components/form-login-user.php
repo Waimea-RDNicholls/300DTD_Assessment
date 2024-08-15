@@ -1,6 +1,3 @@
-
-
-
 <form autocomplete="off"
      hx-post="/do_login"
       hx-trigger="submit">

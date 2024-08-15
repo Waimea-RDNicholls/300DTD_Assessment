@@ -56,43 +56,7 @@ catch (PDOException $e) {
     die('There was an error when connecting to the database');
 }
 consoleLog($users);
-
-
-
-
-// foreach($users as $user) {
-
-//     $query = 'SELECT times.start_time, times.end_time, times.userid, users.username FROM times
-//     INNER JOIN users ON times.userid = users.id
-//     WHERE userid = ?
-//     ORDER BY times.userid DESC';
-
-//     try {
-//         $stmt = $db->prepare($query);
-//         $stmt->execute([$user['id']]);
-//         $otherSchedules = $stmt->fetchAll();
-//     }
-//     catch (PDOException $e) {
-//         consoleLog($e->getMessage(), 'DB Connect', ERROR);
-//         die('There was an error when connecting to the database');
-//     }   
-
-//     foreach($otherSchedules as $otherSchedule) {
-
-//         foreach($ownSchedules as $ownSchedule) {
-    
-//             if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
-//                 echo '<li
-//                 hx-trigger="click"
-//                 hx-get="/user/'.$otherSchedule['userid'].'"
-//                 hx-target="#filter-list">'.$otherSchedule['username'].'</li>';
-//                 echo '<p>Start time: '.$otherSchedule['start_time'].' End time: '.$otherSchedule['end_time'].'</p>'; 
-//             }
-//         }
-
-
-//     }
-// }
+// Tracking variable to determine if users have ever had cross-matching schedules
 $hasSchedule = 0;
 // Grab each user's individual info
 foreach($users as $user) {
@@ -112,29 +76,30 @@ foreach($users as $user) {
         die('There was an error when connecting to the database');
     }   
     // Compare logged in user's schedules to other users schedules
-foreach($otherSchedules as $otherSchedule) {
+    foreach($otherSchedules as $otherSchedule) {
 
-    foreach($ownSchedules as $ownSchedule) {
+        foreach($ownSchedules as $ownSchedule) {
 
-        // If users have an overlap in availability...
-        if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
+            // If users have an overlap in availability...
+            if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
 
-            // On the same day...
-            if ($ownSchedule['day'] == $otherSchedule['day']) {
-            // Display their name as a valid option to click
-                echo '<article
-                id="filter-list"
-                hx-trigger="click"
-                hx-get="/validtimes/'.$otherSchedule['userid'].'"
-                hx-target="#view-filter">Click to view '.$otherSchedule['username'].'\'s valid schedules!</article>'; 
-                $hasSchedule = 1;
-                break 3;
-            }
+                // On the same day...
+                if ($ownSchedule['day'] == $otherSchedule['day']) {
+                // Display their name as a valid option to click
+                    echo '<article
+                    id="filter-list"
+                    hx-trigger="click"
+                    hx-get="/validtimes/'.$otherSchedule['userid'].'"
+                    hx-target="#view-filter">Click to view '.$otherSchedule['username'].'\'s valid schedules!</article>'; 
+                    $hasSchedule = 1;
+                    break 3;
+                }
+        }
+        }
+
     }
-    }
-
 }
-}
+// If no valid cross-matching schedules, state so
 if ($hasSchedule == 0) {
     echo '<p>No-one matches your schedule and/or preferences.<p>';
 }

@@ -10,6 +10,8 @@
     <label>Type</label>
     <?php
     require_once 'lib/db.php';
+
+    // Grab user data to pre-fill edit form
     $db = connectToDB();
     $query = 'SELECT description, preferences FROM users WHERE id = ?';
 
@@ -48,7 +50,7 @@
 
     <input type="submit" value="Edit">
 
-    <button hx-get="/userdetails"
+    <button hx-get="/profiledetails"
     hx-trigger="click"
-    hx-target="#view-details"
+    hx-target="#profile"
     hx-swap="innerHTML">Back</button>

@@ -20,10 +20,6 @@ catch (PDOException $e) {
 }
 
 
-
-// to do
-// give every message it's own box to stand out more ideally
-
 foreach($messages as $message) {
 
     // Allow user to view more message details on click
@@ -46,6 +42,8 @@ foreach($messages as $message) {
     hx-swap="innerHTML">X</button>';
     echo '</article>';
 }
+
+// Tell user if no messages
 if ($messages == NULL) {
     echo '<p>You have no messages.<p>';
 }

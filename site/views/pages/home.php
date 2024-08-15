@@ -2,6 +2,7 @@
 
 
 <?php if ($isLoggedIn): 
+    // Display help/about us text by default if logged in
     echo '<h1>Welcome,  '.$_SESSION['user']['name'].'</h1>';
     echo '<div id="logged_in"
     hx-get="/info"
@@ -15,9 +16,9 @@ else: ?>
 
 
 <!-- Show buttons to login/sign up if not logged in -->
+<div id="not_logged_in">
     <h1>Welcome to GameLinker!</h1>
 <p>It seems you aren't signed in.</p>
-<div id="not_logged_in">
     <button
         hx-get="/register"
         hx-replace="innerHTML"

@@ -18,11 +18,13 @@ catch (PDOException $e) {
 // Display specific message details
 echo '<h id=msg_details_title>'.$message['title'].'</h>';
 echo '<p id=msg_details_text>'.$message['text'].'</p>';
+
 // Allow user to send a reply
 echo '<button
 hx-trigger="click"
 hx-get="/messageform/'.$message['sender'].'"
 hx-target="#view-messages">Send a reply!</button>';
+
 // Allow user to go back
 echo '<button hx-get="/messagelist"
 hx-trigger="click"

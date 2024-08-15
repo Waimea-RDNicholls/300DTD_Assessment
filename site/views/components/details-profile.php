@@ -29,4 +29,20 @@ echo '<button   hx-trigger="click"
                 Edit Profile </button>';
 echo '</div>';
 
+// Display all users schedules
+echo '<article id="view-schedule"
+hx-get="/viewschedule/'.$userid.'"
+hx-trigger="load">
+Loading schedules...
+</article>';
+
+// Allow user to create new schedule
+echo '<div id="scheduling">';
+echo '<button
+    hx-get="/scheduleform"
+    hx-trigger="click"
+    hx-target="#profile"
+    hx-swap="innerHTML">Create a Schedule!</button>';
+echo '</div>';
+
 ?>

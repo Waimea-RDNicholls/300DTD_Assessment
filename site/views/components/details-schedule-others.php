@@ -41,7 +41,7 @@ catch (PDOException $e) {
 
         foreach($ownSchedules as $ownSchedule) {
     
-            // Display if the users schedules have an overlap in availability
+            // Display if the users schedules have an overlap in availability and are same day
             if ($ownSchedule['day'] == $otherSchedule['day']) {
                 if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
                     echo '<article

@@ -24,3 +24,8 @@
     <input name="end" type="number" min="0" max="24" required>
 
     <input type="submit" value="Create a Schedule!">
+
+    <button hx-get="/profiledetails"
+    hx-trigger="click"
+    hx-target="#profile"
+    hx-swap="innerHTML">Back</button>

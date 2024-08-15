@@ -25,6 +25,8 @@ session_start();
 // Check which type of user we are
 $userName   = $_SESSION['user']['name']     ?? 'Guest';
 $isLoggedIn = $_SESSION['user']['loggedIn'] ?? false;
+
+// Save what page the user was on last
 $_SESSION['page'] = $_SERVER['HTTP_REFERER'];
 
 
@@ -59,19 +61,20 @@ foreach($messages as $message) {
 //-------------------------------------------------------------
 // Define routes
 
+// 'Basic page' routes
 $router->route(GET, PAGE, '/',      'pages/home.php');
 $router->route(GET, PAGE, '/profile',      'pages/profile.php');
 $router->route(GET, PAGE, '/filter',      'pages/filter.php');
 $router->route(GET, PAGE, '/messages',      'pages/messages.php');
 
-// All form routes
+// 'Form' routes
 $router->route(GET, HTMX, '/register',    'components/form-create-user.php');
 $router->route(GET, HTMX, '/login',    'components/form-login-user.php');
 $router->route(GET, HTMX, '/scheduleform',    'components/form-create-schedule.php');
 $router->route(GET, HTMX, '/messageform/$id', 'components/form-send-message.php');
 $router->route(GET, HTMX, '/formuseredit/$id',    'components/form-edit-user.php');
 
-// List routes
+// 'List of X' routes
 $router->route(GET, HTMX, '/filterlist', 'components/list-filter.php');
 $router->route(GET, HTMX, '/messagelist', 'components/list-messages.php');
 
@@ -80,40 +83,28 @@ $router->route(GET, HTMX, '/viewschedule/$userid',    'components/list-schedule.
 $router->route(GET, HTMX, '/validtimes/$userid',    'components/details-schedule-others.php');
 $router->route(GET, HTMX, '/viewmessage/$id',    'components/details-message.php');
 $router->route(GET, HTMX, '/user/$id', 'components/details-user.php');
-$router->route(GET, HTMX, '/userdetails',    'components/details-profile.php');
+$router->route(GET, HTMX, '/profiledetails',    'components/details-profile.php');
 $router->route(GET, HTMX, '/info',    'components/details-home-info.php');
 
-// Login/signup form back button
+// 'Page Refresh' routes
 $router->route(GET,   HTMX, '/refresh',          'actions/refresh-home.php');
 $router->route(GET,   HTMX, '/refreshfilter',          'actions/refresh-filter.php');
 
 
-// Do create/delete/edit
+// 'Database modification' routes
 $router->route(POST,   HTMX, '/do_register',          'actions/create-user.php');
 $router->route(POST,   HTMX, '/do_login',          'actions/login-user.php');
 $router->route(POST,   HTMX, '/send_message',          'actions/send-message.php');
 $router->route(POST,   HTMX, '/create_schedule',          'actions/create-schedule.php');
-
 $router->route(PUT,   HTMX, '/do_edit/$id',          'actions/edit-user.php');
 $router->route(DELETE,   HTMX, '/delete_message/$id',          'actions/delete-message.php');
 $router->route(DELETE,   HTMX, '/delete_schedule/$id',          'actions/delete-schedule.php');
 
 
 
-
+// 'Logout' route
 $router->route(GET, PAGE, '/logout', 'actions/logout-user.php');
 
-
-
-// copyable versions for easy access
-// $router->route(GET, PAGE, '/about', 'pages/about.php');
-// $router->route(GET, PAGE, '/thing', 'pages/osu.php');
-// $router->route(GET, HTMX, '/thing',    'components/list-things.php');
-// $router->route(GET, HTMX, '/thing/$id', 'components/details-thing.php');
-// $router->route(GET, HTMX, '/thingform',    'components/form-things.php');
-// $router->route(POST,   HTMX, '/thingform',          'actions/add-thing.php');
-// $router->route(DELETE, HTMX, '/thingdelete/$id',      'actions/delete-thing.php');
-// $router->route(PUT,    HTMX, '/thing/$id',      'actions/update-thing.php');
 
 
 //-------------------------------------------------------------
