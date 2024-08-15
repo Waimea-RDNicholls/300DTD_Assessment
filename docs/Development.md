@@ -217,15 +217,24 @@ I will change the text colour in accordance with what they want.
 
 
 
-### 10/08/2024
+### 16/08/2024
 
-Replace this test with what you are working on
+Made the requested text colour change: ![alt text](images/buttontext.png)
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+Validated my HTML:
+Note that all ignored 'errors' are just HTMX.
 
-> Replace this text with any user feedback / comments
+![alt text](images/html1.png) - Search
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+![alt text](images/html2.png) - Profile
+
+![alt text](images/html3.png) - Search
+
+![alt text](images/html4.png) - Help (logged in)
+
+![alt text](images/html5.png) - Help (not logged in)
+
+There were no non-HTMX errors on my page, so everything seems to be working.
 
 
 
