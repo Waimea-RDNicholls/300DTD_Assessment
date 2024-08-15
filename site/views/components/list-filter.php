@@ -5,7 +5,7 @@ $db = connectToDB();
 
 // Grab logged in user's schedules
 $id = $_SESSION['user']['id'];
-$query = 'SELECT start_time, end_time FROM times WHERE userid = ?';
+$query = 'SELECT start_time, end_time, day FROM times WHERE userid = ?';
 
 try {
     $stmt = $db->prepare($query);
@@ -97,7 +97,7 @@ $hasSchedule = 0;
 // Grab each user's individual info
 foreach($users as $user) {
 
-    $query = 'SELECT times.start_time, times.end_time, times.userid, users.username FROM times
+    $query = 'SELECT times.start_time, times.end_time, times.userid, times.day, users.username FROM times
     INNER JOIN users ON times.userid = users.id
     WHERE userid = ?
     ORDER BY times.userid DESC';
@@ -119,15 +119,18 @@ foreach($otherSchedules as $otherSchedule) {
         // If users have an overlap in availability...
         if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
 
+            // On the same day...
+            if ($ownSchedule['day'] == $otherSchedule['day']) {
             // Display their name as a valid option to click
-            echo '<article
-            id="filter-list"
-            hx-trigger="click"
-            hx-get="/validtimes/'.$otherSchedule['userid'].'"
-            hx-target="#view-filter">Click to view '.$otherSchedule['username'].'\'s valid schedules!</article>'; 
-            $hasSchedule = 1;
-            break 2;
-        }
+                echo '<article
+                id="filter-list"
+                hx-trigger="click"
+                hx-get="/validtimes/'.$otherSchedule['userid'].'"
+                hx-target="#view-filter">Click to view '.$otherSchedule['username'].'\'s valid schedules!</article>'; 
+                $hasSchedule = 1;
+                break 3;
+            }
+    }
     }
 
 }

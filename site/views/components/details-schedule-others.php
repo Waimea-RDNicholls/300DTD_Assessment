@@ -7,7 +7,7 @@ $db = connectToDB();
 
 // Grab all of current user's schedules
 $id = $_SESSION['user']['id'];
-$query = 'SELECT start_time, end_time FROM times WHERE userid = ?';
+$query = 'SELECT start_time, end_time, day FROM times WHERE userid = ?';
 
 try {
     $stmt = $db->prepare($query);
@@ -42,13 +42,15 @@ catch (PDOException $e) {
         foreach($ownSchedules as $ownSchedule) {
     
             // Display if the users schedules have an overlap in availability
-            if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
-                echo '<article
-                id="filter-list"
-                hx-trigger="click"
-                hx-get="/user/'.$otherSchedule['userid'].'"
-                hx-target="#view-filter">'.$otherSchedule['username'].' can play on 
-                '.$otherSchedule['day'].' from '.$otherSchedule['start_time'].' to '.$otherSchedule['end_time'].'.</article>';
+            if ($ownSchedule['day'] == $otherSchedule['day']) {
+                if ($ownSchedule['end_time'] >= $otherSchedule['start_time'] &&   $ownSchedule['start_time'] <= $otherSchedule['end_time']) {
+                    echo '<article
+                    id="filter-list"
+                    hx-trigger="click"
+                    hx-get="/user/'.$otherSchedule['userid'].'"
+                    hx-target="#view-filter">'.$otherSchedule['username'].' can play on 
+                    '.$otherSchedule['day'].' from '.$otherSchedule['start_time'].' to '.$otherSchedule['end_time'].'.</article>';
+                }
             }
         }
 
