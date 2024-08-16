@@ -1,11 +1,6 @@
 :root {
     --font-size:         1rem;
  
-    /* --border-color:      var(--pico-muted-border-color);
-    --accent-color:      var(--pico-color-pumpkin);
- 
-    --link-active-color: var(--accent-color); */
- 
     --border-colour: black;
     --background-colour: #0F2733;
     --text-colour: white;
@@ -35,9 +30,6 @@
     color: var(--text-colour);
 }
  
-/* find a way to disable pico's default colour so all text is white
- 
-ALT FIX > invert colour scheme to be lighter (not pag but it'll do i guess)*/
 body {
     display: flex;
     flex-direction: column;

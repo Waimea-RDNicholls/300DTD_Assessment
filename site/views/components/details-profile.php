@@ -3,8 +3,8 @@ require_once 'lib/db.php';
 
 // Grab id of logged in user
 $id = $_SESSION['user']['id'];
-
 $db = connectToDB();
+
 // Grab details of the user currently signed in
 $query = 'SELECT description, preferences FROM users WHERE id = ?';
 

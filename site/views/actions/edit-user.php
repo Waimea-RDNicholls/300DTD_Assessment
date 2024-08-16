@@ -2,7 +2,8 @@
 
 require_once 'lib/db.php';
 
-consoleLog($_PUT, 'Form Data');
+// Debug info
+// consoleLog($_PUT, 'Form Data');
 
 // Grab data from form
 $description = $_PUT['desc'];

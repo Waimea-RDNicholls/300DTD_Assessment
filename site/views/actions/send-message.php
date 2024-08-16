@@ -1,8 +1,8 @@
 <?php 
 
 require_once 'lib/db.php';
-
-consoleLog($_POST, 'Form Data');
+// Debug info
+// consoleLog($_POST, 'Form Data');
 
 // Grab message data
 $title = $_POST['title'];

@@ -19,7 +19,7 @@ catch (PDOException $e) {
     die('There was an error when connecting to the database');
 }
 
-
+// Display all messages
 foreach($messages as $message) {
 
     // Allow user to view more message details on click

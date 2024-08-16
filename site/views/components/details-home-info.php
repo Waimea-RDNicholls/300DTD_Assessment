@@ -1,4 +1,4 @@
-<?php global $isLoggedIn; ?>
+<?php global $isLoggedIn;?>
 
 <h1>What is GameLinker?</h1>
 <p>GameLinker is an app designed to link boardgamers together. We know the struggle of finding that one extra player to fill in your game of Monopoly, 

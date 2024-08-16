@@ -1,17 +1,18 @@
+<!-- Send message form -->
 <form autocomplete="off"
-      hx-post="/send_message"
-      hx-trigger="submit">
+    hx-post="/send_message"
+    hx-trigger="submit">
 
-    <label>Title</label>
-    <input name="title" type="text" maxlength="30" required>
+  <label>Title</label>
+  <input name="title" type="text" maxlength="30" required>
 
-    <input type="hidden" name="sender" value="<?= $_SESSION['user']['id'] ?>">
+  <input type="hidden" name="sender" value="<?= $_SESSION['user']['id'] ?>">
 
-    <input type="hidden" name="target" value="<?= $id ?>">
+  <input type="hidden" name="target" value="<?= $id ?>">
 
-    <label>Text</label>
-    <input name="text" type="text" maxlength="250" required>
-    <input type="submit" value="Send">
+  <label>Text</label>
+  <input name="text" type="text" maxlength="250" required>
+  <input type="submit" value="Send">
   
 
 

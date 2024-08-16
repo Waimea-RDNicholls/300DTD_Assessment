@@ -56,8 +56,9 @@ catch (PDOException $e) {
     die('There was an error when connecting to the database');
 }
 consoleLog($users);
-// Tracking variable to determine if users have ever had cross-matching schedules
-$hasSchedule = 0;
+
+$hasSchedule = 0; // Tracking variable to determine if users have ever had cross-matching schedules
+
 // Grab each user's individual info
 foreach($users as $user) {
 

@@ -1,12 +1,8 @@
+    <!-- Edit profile form -->
 <form   autocomplete="off"
         hx-put="/do_edit/<?= $id ?>"
         hx-trigger="submit"
         hx-target="#userinfo">
-
-
-
-
-
     <label>Type</label>
     <?php
     require_once 'lib/db.php';
@@ -47,9 +43,9 @@
 
     <label>Description</label>
     <input name="desc" type="text" maxlength="200" required value="<?=$desc  ?>">
-
     <input type="submit" value="Edit">
 
+    <!-- Back button -->
     <button hx-get="/profiledetails"
     hx-trigger="click"
     hx-target="#profile"

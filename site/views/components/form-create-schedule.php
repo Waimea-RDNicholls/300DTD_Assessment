@@ -1,10 +1,8 @@
+<!-- Create schedule form -->
 <form autocomplete="off"
       hx-post="/create_schedule"
       hx-trigger="submit"
       hx-swap="innerHTML">
-
-
-
 
     <label>Day</label>
     <select name="day" type="text" required>
@@ -25,6 +23,7 @@
 
     <input type="submit" value="Create a Schedule!">
 
+    <!-- Back button -->
     <button hx-get="/profiledetails"
     hx-trigger="click"
     hx-target="#profile"

@@ -1,20 +1,23 @@
 <?php
 require_once 'lib/db.php';
 
-consoleLog($_POST, 'Form Data');
+// Debug info
+// consoleLog($_POST, 'Form Data');
 
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 
 
 $db = connectToDB();
+// Check for inputted username
 $query = 'SELECT * FROM users WHERE username = ?';
 
 $stmt = $db->prepare($query);
 $stmt->execute([$user]);
 $userData = $stmt->fetch();
 
-consoleLog($userData, 'DB Data');
+// Debug info
+// consoleLog($userData, 'DB Data');
 
 // Did we get a user account?
 if ($userData) {
@@ -33,7 +36,7 @@ if ($userData) {
         // Go to home page
         header('HX-Redirect: ' . SITE_BASE . '/filter');
     }
-    // Login failure? Show button to show login form again.
+    // Wrong password? Allow retry
     else {
         echo '<h2>Incorrect password.</h2>';
     
@@ -46,6 +49,7 @@ if ($userData) {
     }
 
 }
+// User doesn't exist? Allow retry
 else {
     echo '<h2>Sorry, that username does not exist.</h2>';
     echo '<button

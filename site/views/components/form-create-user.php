@@ -1,3 +1,4 @@
+<!-- Account creation form -->
 <form autocomplete="off"
       hx-post="/do_register"
       hx-trigger="submit">
@@ -32,6 +33,7 @@
 
     <input type="submit" value="Sign Up!">
 
+    <!-- Back button -->
     <button
     hx-get="/refresh"
     hx-trigger="click">Back</button>

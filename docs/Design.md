@@ -12,13 +12,9 @@ Assessment Standards: **91902** and **91903**
 
 ### Identified Need or Problem
 
-<!-- Replace this text with a clearly stated problem or need that exists that your project will attempt to solve / fulfil. -->
-
 It's hard to find people willing to play boardgames, cardgames or videogames just by looking around in person. Many of these games have niche audiences and small communities, often spread across the world. This means it's hard to find people to play with, but also to ensure you want to play with them, or have the time to. A casual gamer doesn't want to play with a competitive player. A player in New Zealand will struggle to play with a player in the United Kingdom, due to timezone differences. An app that allows you to search for people who want to play the same game as you, with a strong filtering system, solves this.
 
 ### End-User Requirements
-
-<!-- Replace this text with a description of your typical end-users and their specific needs / expectations / requirements. -->
 
 Competitive users: These users tend to want a more competitive style of game. They don't want to play with newer players and destroy them utterly and absolutely. They want good competition. They also want to be able to easily organise matches, with easy-to-use scheduling systems. These players tend to be willing to play at extreme hours, so they'll want to focus more on the skill level of players.
 
@@ -47,35 +43,26 @@ This app will need:
 
 ### Usability
 
-<!-- Replace this text with a clear explanation of what the implication means. -->
 Usability means making the app easy to use for all users, regardless of how technologically literate they are. This also means ensuring your website is usable for people with disabilities such as colour blindness, etc.
 
-<!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
 This is perhaps the most relevant implication as many boardgames are filled with people who aren't very technologically literate. The average age of a scrabble player is in the 50's, and older people tend towards being less literate technologically. Older people are also more likely to suffer from some form of disability that means they'll struggle to use apps that do not accomodate for that.
 
-<!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
 This means I will have to consider usability in every aspect of my website. Making buttons intuitive and easy to understand, making symbols large enough to easily see, not using colours that blend together and make things hard to see. It also means thinking about designing the app in a way that feels consistent and cohesive, e.g different pages should use the same icons and follow the same design ideas as other similar pages.
 
 ### Functionality
 
-<!-- Replace this text with a clear explanation of what the implication means. -->
 This means ensuring the website functions the way I as the developer intend it to. This means that every feature should work without error. Making an account should always work, even if the user inputs unexpected characters. Filtering should work, even if the games have unique characters.
 
-<!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
 This is relevant because an app that lacks functionality simply won't work. You won't have a filtering app, you'll have a waste of space you'll uninstall. Good functionality also future-proofs the app, as good functionality should be strong enough to handle things I don't expect. This would mean the app would require less maintainence from me.
 
-<!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
 I will need to consider every part of my code. As many parts of it will inevitably be interconnected, such as the "preferred games" and the filtering system, or the users and their messages, it means every piece of code will need to operate and function in order to make other pieces function. This also means I will need to consider whether to error-proof something against unexpected inputs, or to disable that unexpected inputs, and which would be better for the specific task at hand.
 
 ### Future Proofing
 
-<!-- Replace this text with a clear explanation of what the implication means. -->
 This means ensuring my app will function throughout the future without requiring any or much maintainence. Insuring it against future problems that may pop up, making sure it works in my abscence.
 
-<!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
 This is relevant because futureproofing a project reduces the workload on the developer (me) exponentionally. I won't have to check back on the app 24/7 to make sure the end users are getting a working product. It also means that the app will be far more stable. A futureproofed app will generally be reliable and adaptable, meaning that it'll naturally function better against errors and bugs that may emerge. Additionally, there are new games coming out all the time. I can't afford the time to manually input each new game into the database, so futureproofing my app to do something against that will make the app still have purpose 5-10 years into the future.
 
-<!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
 This means considering how and where to futureproof the app. Will usernames and hashes need to be futureproofed? Probably not. But, will I need to find some way to futureproof the "preferred game" selection? Probably, as new games come out all the time. It means considering whether or not a user-based solution (letting them input their own preferred game) or a developer-based solution (me making sure it'll work for the future) is the best fit for any specific problem that needs future-proofing.
 
 ### End-Users
@@ -181,11 +168,21 @@ Place screenshots and notes here that show your *actual system UI* in action.
 
 ### Meeting the Needs of the Users
 
-Replace this text with a brief evaluation of how well you met the needs of your users. Look at what you initially wrote about who they are, what specific needs they have, etc. and discuss how well the system meets those needs.
+I initially identified two kinds of users; the casual boardgame players and the competitive boardgame players. As I developed my project, I found myself more designing around the casual player, by making my website focus around operating purely on a continent-to-continent basis rather than allowing for exceptions. This means competitive players can’t find other competitive players anywhere, when they might be willing to play at extreme times. I feel this is justifiable, though, given many competitive games still only allow match-making in the same regions. Additionally, the competitive boardgame playerbase is vastly smaller than the casual playerbase, and catering my website to the needs of the very few instead of the needs of the very many seemed silly. 
+
+On the ease of use, I gave my website some helpful notes and documentation as well as explanations wherever necessary. I used red to indicate a delete button, and made buttons light up when hovered over to indicate clickability. I think these measures make the website much more usable for people new to websites. 
 
 ### Meeting the System Requirements
 
-Replace this text with a brief evaluation of how well you met the requirements that you defined at the start of the project, etc. Look back at the list of features / functionality you initially set and discuss how well your system has implemented each one.
+I initially wanted account registration, logging in, profile customization, some form of chat, as well as a strong search and filter system. I believe I accomplished all of these. 
+
+You can make an account and log in as it, and this was implemented to the standard of most websites. Nothing breaks whilst trying to make an account, for example. 
+
+I also added basic profile customization. Users can change their profile description, what game they want to play, as well as their own continent and whether they’re a casual or competitive player. This gives the users some measure of customising their own profile, but I could’ve pushed for adding profile images too if I had the time. 
+
+There was a basic messaging system implemented, as well. Users can easily send and receive messages from users who they can play with. They can easily delete messages if needed, and there’s an alert ticker for messages. I think this feature was implemented well, but the chat was replaced with more of an email style system. However, there are many chat apps out there, and the mail system acts more as an intermediary before users move to chat on a different platform. 
+
+The search and filtering systems were one and the same. At the cost of user customizability of the filter system, I had it done automatically. Users don’t need to toggle filters, because the website will automatically find all players that they can play with given their schedules, preferences, continent and player type. I think this trade-off made the website better for the more casual end users, as it reduces the amount of learning and clicking they need to do to use the website, making it simpler to use. This auto-filter then acts as a search, given that you’re finding all eligible users to play with. I believe this feature was implemented well. 
 
 ### Review of IMPLICATION NAME HERE
 

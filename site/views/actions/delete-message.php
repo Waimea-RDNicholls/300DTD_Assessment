@@ -2,7 +2,8 @@
 
 require_once 'lib/db.php';
 
-consoleLog($_POST, 'Form Data');
+// Debug info
+// consoleLog($_POST, 'Form Data');
 
 $db = connectToDB();
 
