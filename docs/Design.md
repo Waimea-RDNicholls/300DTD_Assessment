@@ -144,6 +144,8 @@ This means asking the end users what they think is confusing and what they don't
 
 Place a image here that shows the *final design* of your database: tables, fields and relationships.
 
+![Alt text](images/dbs1.png)
+
 ### User Interface Design
 
 Place images here that show your *final design* of your UI: layout, colours, etc.
