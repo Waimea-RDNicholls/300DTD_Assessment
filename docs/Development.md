@@ -220,6 +220,7 @@ I will change the text colour in accordance with what they want.
 ### 16/08/2024
 
 Made the requested text colour change: ![alt text](images/buttontext.png)
+Now text is white instead of black universally.
 
 Validated my HTML:
 Note that all ignored 'errors' are just HTMX.

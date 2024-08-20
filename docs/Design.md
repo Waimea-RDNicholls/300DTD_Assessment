@@ -186,13 +186,26 @@ There was a basic messaging system implemented, as well. Users can easily send a
 
 The search and filtering systems were one and the same. At the cost of user customizability of the filter system, I had it done automatically. Users don’t need to toggle filters, because the website will automatically find all players that they can play with given their schedules, preferences, continent and player type. I think this trade-off made the website better for the more casual end users, as it reduces the amount of learning and clicking they need to do to use the website, making it simpler to use. This auto-filter then acts as a search, given that you’re finding all eligible users to play with. I believe this feature was implemented well. 
 
-### Review of IMPLICATION NAME HERE
+### Review of Functionality
 
 Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
 
-### Review of IMPLICATION NAME HERE
+The website was fully functional and worked as intended. You could easily sign up or login. All invalid inputs were rejected successfully. You could then create one schedule per day, and invalid times were rejected. The filtering worked with no errors, with only valid schedules being displayed on the filtered list. You could then send messages without any problems, and read messages you'd received. Overall, the website functioned without issue, meaning this implication was fully met with success.
+Evidence of working functionality can be seen in the error-checking video, shown here:
+
+### Review of Usability
 
 Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+
+The website became quite useable, I'd say. It has a traditional navigation layout at the top right with underlined links (arguably the weakest part of my website's usability) with pretty self-identifying names, like "Help" or "Search" or "Messages". This should make it clear to users that these are links to pages. Then, every clickable button lights up when the cursor is hovered over it, or reads "Submit" or "Complete Edit", meaning all the buttons should intuitively feel quite obvious to the user. Finally, the bright white font contrasts well with the dark blue website, making it easy to read. All of this congeals to meet the usability requirements I laid out earlier, and I believe this implication was adequately met. Something to improve upon was the final form; 'preferences' is not immediately obvious to a new user, which is why I changed it, but it also leaves room for misspelling on the user end. This reduces the usability somewhat.
+Evidence photos:
+
+
+### Review of Future-Proofing
+
+Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+
+This website was designed with the future in mind. The first way I did this was making sure it was only an intermediary app. Instead of all messaging being done on the app, the messaging features were left rather light-weight to incentive going to a different messaging platform. Users can also delete their messages, avoiding inbox clogging all on their own. On the games front, users can input whatever game they want to play in their preferences. This means I don't have to constantly update a list of popular games to ensure the filtering encompasses all users. Instead, users can input new games all on their own, meaning the website should function well into the future. I'd say this implication was fully met.
 
 ### Review of IMPLICATION NAME HERE
 
