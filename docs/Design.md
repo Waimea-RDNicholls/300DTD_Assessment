@@ -133,13 +133,18 @@ This means asking the end users what they think is confusing and what they don't
 
 ### Database Structure
 
-Place a image here that shows the *final design* of your database: tables, fields and relationships.
+![Alt text](images/drawSQL_DB2.png)
 
-![Alt text](images/dbs1.png)
+
 
 ### User Interface Design
 
-Place images here that show your *final design* of your UI: layout, colours, etc.
+Planned Colours:
+![Alt text](images/bluecolour.png)
+
+Planned Design:
+![Alt text](images/design1.png)
+
 
 
 -------------------------------------------------
@@ -148,11 +153,15 @@ Place images here that show your *final design* of your UI: layout, colours, etc
 
 ### Database Structure
 
-Place a image here that shows the *actual database structure* that you implemented: tables, fields and relationships.
+![alt text](images/db1.png)
+![alt text](images/dbmsg.png)
+![alt text](images/dbtime.png)
+![alt text](images/dbuser.png)
 
 ### User Interface Design
 
-Place screenshots and notes here that show your *actual system UI* in action.
+Hoping the error video accomplishes this just fine: https://youtu.be/QjY-MnQbSQU
+
 
 
 -------------------------------------------------
@@ -180,7 +189,7 @@ The search and filtering systems were one and the same. At the cost of user cust
 ### Review of Functionality
 
 The website was fully functional and worked as intended. You could easily sign up or login. All invalid inputs were rejected successfully. You could then create one schedule per day, and invalid times were rejected. The filtering worked with no errors, with only valid schedules being displayed on the filtered list. You could then send messages without any problems, and read messages you'd received. Overall, the website functioned without issue, meaning this implication was fully met with success.
-Evidence of working functionality can be seen in the error-checking video, shown here:
+Evidence of working functionality can be seen in the error-checking video, shown here: https://youtu.be/QjY-MnQbSQU
 
 ### Review of Usability
 

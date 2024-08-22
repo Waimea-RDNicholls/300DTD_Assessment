@@ -24,12 +24,6 @@ Previously, the database looked like this. A few parts were unnecessary (the det
 
 2 tables, the details and days tables, were removed. The details were integrated to the users section, as each user will have their one set of their own unique details (therefore there is no point having a second table to represent that). The days table was removed, as it functionally did nothing (you could represent each day with a single column as a number from 1-7). The times table was then altered to have a start time and end time, because having 24 columns for each time was clunky and overcomplicated, as well as inefficient.
 
-<!-- Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary. -->
-
-<!-- > Replace this text with any user feedback / comments
-
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc. -->
-
 ### 17/05/2024
 
 High-Level Design/Flow of App
@@ -87,12 +81,14 @@ Got end user feedback on my current schematics.
 
 ![Alt text](images/userfeedback_1.PNG)
 
-The first higher level flow design will be used. I'll focus on simpler colours for ease of use.
+The first higher level flow design will be used. I'll focus on simpler colours for ease of use, specifically this one:
+![Alt text](images/bluecolour.png)
+as the user thought it would be best.
 
 ![Alt text](images/design1.png)
 Also made a rough figma draft of the actual website, to be discussed with the end users.
 
-### 06//06/2024
+### 06/06/2024
 
 Got more end user feedback on higher level flow as well as some design choices from ReptileMan1234 (formerly totallywaffles)
 ![Alt text](images/userfeedback_2.png)
@@ -240,15 +236,11 @@ There were no non-HTMX errors on my page, so everything seems to be working.
 
 
 
-### 10/08/2024
+### 22/08/2024
 
-Replace this test with what you are working on
-
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
-
-> Replace this text with any user feedback / comments
-
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+Did some very minor bugfixes, and then checked my site for errors.
+Video here: https://youtu.be/QjY-MnQbSQU
+(Note that you physically cannot input invalid inputs in the scheduling field, e.g you can't type letters there.)
 
 
 
