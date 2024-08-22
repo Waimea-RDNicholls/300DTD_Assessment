@@ -16,19 +16,24 @@ catch (PDOException $e) {
 }
 
 
-// Display all schedules
-echo '<ul>';
-foreach($times as $time) {
-    echo '<li id="schedule-list">';
+// Display all schedules if user has one
+if ($times) {
+    echo '<ul>';
+    foreach($times as $time) {
+        echo '<li id="schedule-list">';
 
-    echo '<p>You can play on '.$time['day'] .' from '.$time['start_time'].' to '.$time['end_time'].'.</p>';
-    // Delete schedule button
-    echo '<button class="delete-button"
-    hx-delete="/delete_schedule/'.$time['id'].'"
-    hx-trigger="click"
-    hx-target="#view-schedule"
-    hx-swap="innerHTML">X</button>';
-    echo '</li>';
+        echo '<p>You can play on '.$time['day'] .' from '.$time['start_time'].' to '.$time['end_time'].'.</p>';
+        // Delete schedule button
+        echo '<button class="delete-button"
+        hx-delete="/delete_schedule/'.$time['id'].'"
+        hx-trigger="click"
+        hx-target="#view-schedule"
+        hx-swap="innerHTML">X</button>';
+        echo '</li>';
+    }
+    echo '</ul>';
+}   
+else {
+    echo '<p>You have no schedules.</p>';
 }
-echo '</ul>';
 ?>

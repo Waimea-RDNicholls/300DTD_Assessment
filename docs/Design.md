@@ -174,6 +174,8 @@ I initially identified two kinds of users; the casual boardgame players and the 
 
 On the ease of use, I gave my website some helpful notes and documentation as well as explanations wherever necessary. I used red to indicate a delete button, and made buttons light up when hovered over to indicate clickability. I think these measures make the website much more usable for people new to websites. 
 
+Finally, I did lots of communication with my end-users, and made sure to implement their feedback. This means I was always at least following what my end-users actually wanted, rather than assuming what they would prefer and going with that.
+
 ### Meeting the System Requirements
 
 I initially wanted account registration, logging in, profile customization, some form of chat, as well as a strong search and filter system. I believe I accomplished all of these. 
@@ -194,62 +196,80 @@ Evidence of working functionality can be seen in the error-checking video, shown
 ### Review of Usability
 
 The website became quite useable, I'd say. It has a traditional navigation layout at the top right with underlined links (arguably the weakest part of my website's usability) with pretty self-identifying names, like "Help" or "Search" or "Messages". This should make it clear to users that these are links to pages. Then, every clickable button lights up when the cursor is hovered over it, or reads "Submit" or "Complete Edit", meaning all the buttons should intuitively feel quite obvious to the user. Finally, the bright white font contrasts well with the dark blue website, making it easy to read. All of this congeals to meet the usability requirements I laid out earlier, and I believe this implication was adequately met. Something to improve upon was the final form; 'preferences' is not immediately obvious to a new user, which is why I changed it, but it also leaves room for misspelling on the user end. This reduces the usability somewhat.
-Evidence Screenshots:
+Before hovering:
+![alt text](images/ev1.png)
+After hovering:![alt text](images/ev2.png)
+
 
 
 ### Review of Future-Proofing
 
 This website was designed with the future in mind. The first way I did this was making sure it was only an intermediary app. Instead of all messaging being done on the app, the messaging features were left rather light-weight to incentive going to a different messaging platform. Users can also delete their messages, avoiding inbox clogging all on their own. On the games front, users can input whatever game they want to play in their preferences; note that this last one was something I noted in my initial thoughts. This means I don't have to constantly update a list of popular games to ensure the filtering encompasses all users. Instead, users can input new games all on their own, meaning the website should function well into the future. I'd say this implication was fully met.
 
-Evidence Screenshots:
+Delete button on messages: ![alt text](images/ev3.png)
 
 ### Review of End Users
 
 Initially, I wanted to cater to both casual and competitive boardgame players. Upon further reflection, I decided to purely cater to casual players, making a website focused around them. By cutting out the very small end-user group of competitive players, I got a lot more time to focus on a website dedicated to casual players who may not be the most technologically literate. My website requires little effort from the user to set up, only requiring an account to be fully ready to go, as filtering is done by default instead of requiring user input. This means casual users (who likely don't want to spend even minutes fiddling with random settings) can get straight into using the app. I'd say I met their requirements, and met the implication there. I may not've fulfilled my goal of catering to competitive players, but given how they're vastly, vastly outnumbered by casual players, I feel the tradeoff was worthwhile.
 
 Screenshot:
+![alt text](images/ev4.png)
 Note how there's no 'filter' input. The website takes the info it's been given and uses it automatically, instead.
 
 ### Review of Cultural Implications
 
 The website draws upon no cultural imagery. The colour scheme is dark blue on white, which isn't a very politically significant combination unless you're really reaching with some really far off N.A.T.O comparision. The language used is the bare minimum anyways, but all the text doesn't mention anything to do with culture. See here:
+![alt text](images/ev5.png)
 
-I feel I did fail to meet this implication adequately, however. The website itself strikes a neutral tone, but I felt a report feature would've been a good and necessary way to fully meet this implication. The reality here is I just forgot about it entirely, meaning offensive users could ruin other's experiences. This is partially mitigated by the fact there's no real way to get information on the users involved on the website (hard to attack someone for their culture when you know nothing about them at all), but it still would've been nice. Given the website strikes that neutral tone, I believe this implication was partially met.
+I feel I did fail one part of this implication, however. The website itself strikes a neutral tone, but I felt a report feature would've been a good and necessary way to fully meet this implication. The reality here is I just forgot about it entirely, meaning offensive users could ruin other's experiences. This is partially mitigated by the fact there's no real way to get information on the users involved on the website (hard to attack someone for their culture when you know nothing about them at all), but it still would've been nice. Given the website strikes that neutral tone, I believe this implication was partially met.
 
 ### Review of Error Prevention
 
 To address this principle, I did two things. First, all of my forms do not allow inputs not within the bounds set in my database. Usernames, passwords, descriptions, everything has a maximum length. This ensures no one user can accidentally break my database by having a 25 character long username. Nothing else was needed for the forms; no need to restrict specific characters on this app.
 
 The second thing was to do with scheduling. When a player wishes to create a schedule, I made the 'insert to database' function check two things. First, is there already a schedule on that day? And second, is the end-time greater than the start time? If both of these are true, it goes through, otherwise the user must re-input: 
+![alt text](images/ev6.png)
+![alt text](images/ev7.png)
 
 This means users cannot input invalid data, even if they wanted to, as the website simply does not allow it. Through these two things, I believe I met this implication.
 
 ### Review of Recognition rather than Recall
 
-When I wrote this UX Principle, I assumed I would be making a drop-down menu with various filtering options. My website evolved to simply filter by default, based on the user's details. This means that there is no actual memorisation required to use my website. You create an account, and then you just need to press the buttons on the top right to navigate, and they all have rather self-explanatory names.
+When I wrote this UX Principle, I assumed I would be making a drop-down menu with various filtering options. My website evolved to simply filter by default, based on the user's details. This means that there is no actual memorisation required to use my website. You create an account, and then you just need to press the buttons on the top right to navigate, and they all have rather self-explanatory names:
+![alt text](images/ev8.png)
 As for other recognition scenarios, it's quite simple to message people. You just click on a schedule they have that displays on the filtering page, and send a message. It'll target them by default, meaning you don't even need to remember their username. This website doesn't really require any recall except for your password and username.
 Overall, I'd say I met this UX principle, but with how my ideas evolved, it wasn't a very high bar.
 
 ### Review of Help and Documentation
 
 My website had a help page, shown here:
+![alt text](images/ev5.png)
 
-This features very minimal text, giving a brief explanation of the website and anything that users could be confused by. The goal here was to make sure it was concise, cleared the air about the broad 'what is this website how do I use it' and I feel that was achieved. It's only 100 words of text, so only a minute or less of reading. Additionally, there is relevant help when needed, such as in this form:
+This features very minimal text, giving a brief explanation of the website and anything that users could be confused by. The goal here was to make sure it was concise, cleared the air about the broad 'what is this website how do I use it' and I feel that was achieved. It's only 100 words of text, so only a minute or less of reading. 
 
+Additionally, there is relevant help when needed, such as in this form:
+![alt text](images/ev9.png)
 This is quick to read, easy to understand and makes sure the user knows what times to input. This means if the user does not understand what kind of time to use, it's almost entirely their fault.
 Overall, I'd say this principle was fulfilled.
 
-### Review of UX PRINCIPLE NAME HERE
+### Review of Helping Users Recognize, Diagnose, and Recover from Errors
 
-Replace this text with brief notes showing how the UX principle was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+The main way this was addressed was by ensuring my website had no room for errors to occur. It's incredibly tough to break the website, because most of the ways you'd do so are just not allowed by my forms and whatnot. However, as discussed prior, if the user makes an error in scheduling, then they're given a clear and concise error message:
+![alt text](images/ev6.png)
+![alt text](images/ev7.png)
 
-### Review of UX PRINCIPLE NAME HERE
+If they have no matching schedules with someone, they're also told quite concisely:
+![alt text](images/ev10.png)
 
-Replace this text with brief notes showing how the UX principle was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+There wasn't much room to address this implication overall, since my website doesn't have any major errors that users can make.
+
+### Review of Visibility of System Status
+
+The main way this was addressed was by making sure the impacts of any button that creates, edits or deletes is shown immediately after pressing. This means users can see something has worked, as they'll go to delete a message and then boom! Their message page has refreshed and that message they pressed to delete is gone! There wasn't much room elsewhere to try address this implication, except for when results came back with no information. As shown prior, when your filter turns up 0 results, you're told instead of being left on a blank screen. When you have no messages, you're told that. This makes sure the users know the website hasn't frozen or broken.
+
+I also did a quick update, to include this kind of feature on the schedules list, as shown here:
+![alt text](images/ev11.png)
 
 
-todo: IMAGES
-BUG TEST VIDEO
-FINISH IMPLICATIONS AND PRINCIPLES WRITING!!!  
-also > images of final layout, database, etc (above implications below everything else)
+
 

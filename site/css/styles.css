@@ -160,7 +160,9 @@ form label {
 #view-schedule li p {
     color: var(--schedule-text-colour);
 }
- 
+#view-schedule p {
+    color: var(--schedule-text-colour);
+}
  
 /* MAIN ---------------------------------------- */
  
