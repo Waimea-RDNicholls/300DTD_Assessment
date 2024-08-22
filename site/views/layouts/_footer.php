@@ -1,5 +1,3 @@
-<!-- Footer could conatin contact info, links, etc. -->
-
 <footer id="main-footer">
 
     <p>

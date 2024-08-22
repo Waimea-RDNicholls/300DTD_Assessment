@@ -1,4 +1,4 @@
-<!-- Main navigation menu. Can add logic for user type / access -->
+<!-- Main navigation menu -->
 <?php global $isLoggedIn; ?>
 
 

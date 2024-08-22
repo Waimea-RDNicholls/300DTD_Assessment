@@ -93,7 +93,7 @@ foreach($users as $user) {
                     hx-get="/validtimes/'.$otherSchedule['userid'].'"
                     hx-target="#view-filter">Click to view '.$otherSchedule['username'].'\'s valid schedules!</article>'; 
                     $hasSchedule = 1;
-                    break 3;
+                    break 2;
                 }
         }
         }

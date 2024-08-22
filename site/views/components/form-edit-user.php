@@ -2,7 +2,7 @@
 <form   autocomplete="off"
         hx-put="/do_edit/<?= $id ?>"
         hx-trigger="submit"
-        hx-target="#userinfo">
+        hx-target="#profile">
     <label>Type</label>
     <?php
     require_once 'lib/db.php';
@@ -25,12 +25,16 @@
         $preferences = $user['preferences'];
         $desc = $user['description'];
         ?>
-    <select name="type" required> <option value="1">Casual</option>
+    <select name="type" required> 
+    <option hidden disabled selected value> -- select an option -- </option>   
+    <option value="1">Casual</option>
     <option value="2">Competitive</option>
     </select>
 
     <label>Continent</label>
-    <select name="continent" required> <option value="1">Oceania</option>
+    <select name="continent" required> 
+    <option hidden disabled selected value> -- select an option -- </option>   
+    <option value="1">Oceania</option>
     <option value="2">Asia</option>
     <option value="3">Africa</option>
     <option value="4">Europe</option>
