@@ -32,7 +32,8 @@ if ($times) {
         echo '</li>';
     }
     echo '</ul>';
-}   
+}
+// Tell user if they have no schedules   
 else {
     echo '<p>You have no schedules.</p>';
 }

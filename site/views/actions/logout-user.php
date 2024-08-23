@@ -1,4 +1,4 @@
-<!-- Perform the logout, e.g. session_destroy(); -->
+<!-- Perform the logout via session_destroy(); -->
 
 <?php
     session_destroy();

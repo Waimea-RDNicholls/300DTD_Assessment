@@ -42,7 +42,7 @@
     <option value="6">South America</option>
     </select>
 
-    <label>Boardgame to play</label>
+    <label>Boardgame you want to play</label>
     <input name="preference" type="text" maxlength="40" required value="<?=$preferences  ?>">
 
     <label>Description</label>

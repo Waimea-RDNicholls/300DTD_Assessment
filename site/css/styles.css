@@ -4,6 +4,8 @@
     --border-colour: black;
     --background-colour: #0F2733;
     --text-colour: white;
+    
+    --link-active-colour: yellow;
  
  
     --button-colour: #376177;
@@ -81,7 +83,7 @@ body {
 }
  
 #main-nav a[aria-current="page"] {
-    color: var(--link-active-color);
+    color: var(--link-active-colour);
     text-decoration: underline;
 }
  
@@ -114,6 +116,9 @@ article {
  
  
 /* LOGIN/SIGNUP FORM ---------------------------------------- */
+/* CURRENTLY NOT IN USE ------------------------------------- */
+
+
 
 /* FORMS ---------------------------------------- */
 

@@ -9,9 +9,11 @@ It is a database-driven web app that allows users to find people who have simili
 - Search for people with similar preferences
 - Filter by timezone, casual/competitive, etc
 - Schedule for when to play
+- Message those with same schedules, preferences, etc
 
 ## Documentation
 
 The following documents support this project:
 - [Design & Review](Design.md)
 - [Development & Testing](Development.md)
+- [Test Accounts](Accounts.md)

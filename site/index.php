@@ -32,28 +32,28 @@ $_SESSION['page'] = $_SERVER['HTTP_REFERER'];
 
 // If user logged in...
 if ($isLoggedIn == true) {
-$db = connectToDB();
+    $db = connectToDB();
 
-// Grab all messages sent to user
-$query = 'SELECT id
-FROM messages
-WHERE target = ?';
+    // ...grab all messages sent to user
+    $query = 'SELECT id
+    FROM messages
+    WHERE target = ?';
 
-try {
-    $stmt = $db->prepare($query);
-    $stmt->execute([$_SESSION['user']['id']]);
-    $messages = $stmt->fetchAll();
-}
-catch (PDOException $e) {
-    consoleLog($e->getMessage(), 'DB Connect', ERROR);
-    die('There was an error when connecting to the database');
-}
+    try {
+        $stmt = $db->prepare($query);
+        $stmt->execute([$_SESSION['user']['id']]);
+        $messages = $stmt->fetchAll();
+    }
+    catch (PDOException $e) {
+        consoleLog($e->getMessage(), 'DB Connect', ERROR);
+        die('There was an error when connecting to the database');
+    }
 
-// Tally total amount of messages sent to user for use in nav display
-$_SESSION['msg']['amount'] = 0;
-foreach($messages as $message) {
-    $_SESSION['msg']['amount'] += 1;
-}
+    // Tally total amount of messages sent to user for use in nav display
+    $_SESSION['msg']['amount'] = 0;
+    foreach($messages as $message) {
+        $_SESSION['msg']['amount'] += 1;
+    }
 
 }
 
